@@ -1,7 +1,4 @@
 Person;Date;Hours;Description
-
 frauchenwald;20161216;1;Setup of project
 frauchenwald;20161217;2;Ported project to scala
 frauchenwald;20161219;1;updated proposal,readme,team,license
-
-
