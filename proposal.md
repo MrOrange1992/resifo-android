@@ -27,17 +27,24 @@ If home button  <br>
 ### Elements chronologicaly
 
 ##### Firstname and Lastname
-- Check invalid inputs like numbers <br>
+- Check invalid inputs like numbers.
+
 ##### Birthdate
 - Useage of widget for scrolling the year month and day
-so user does not have type manually. <br>
+so user does not have type manually.
+
 ##### Gender
-- Usage of 2 radio buttons for male and female <br>
+- Usage of 2 radio buttons for male and female.
+
 ##### Religion
-- Maybe checkbox with pre defined religions and an other-editText <br>
+- Maybe checkbox with pre defined religions and an other-editText.
+
 ##### Place of birth
-- GEO API <br>
+- GEO API
+
 ##### Family status
-- RadioButtons <br>
+- RadioButtons
+
 ##### Citizenship
-- ScrollView <br>
+- ScrollView
+
