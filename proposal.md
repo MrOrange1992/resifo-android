@@ -48,3 +48,12 @@ so user does not have type manually.
 ##### Citizenship
 - ScrollView
 
+### etc...
+
+
+## 3 ListView
+
+The app also has a listview Activity to show the current status of completion.
+It is possible to edit the data directly in the listview or in the wizard.
+
+<img src="images/ListView.png" height="800" width="400" alt="Screenshot"/>
