@@ -10,8 +10,42 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="at.reservoirdogs.resifo_android.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:text="Residence Registration"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/txtViewMeldezettel"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textSize="36sp"
+            android:textStyle="normal|bold" />
+
+        <Button
+            android:text="Start"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:id="@+id/btnStart"
+            android:layout_weight="1"
+            android:onClick="gotoNameActivity"
+            android:textSize="30sp"
+            android:layout_marginTop="20dp" />
+
+        <Button
+            android:text="View Data"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:id="@+id/btnListe"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            android:layout_marginTop="20dp" />
+
+    </LinearLayout>
 </RelativeLayout>
