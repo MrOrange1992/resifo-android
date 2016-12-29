@@ -22,27 +22,27 @@
             android:text="Residence Registration"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:id="@+id/txtViewMeldezettel"
+            android:id="@+id/txtViewResidenceRegistration"
             android:layout_weight="1"
             android:textAlignment="center"
             android:textSize="36sp"
             android:textStyle="normal|bold" />
 
         <Button
-            android:text="Start"
+            android:text="New Registration"
             android:layout_width="match_parent"
             android:layout_height="10dp"
-            android:id="@+id/btnStart"
+            android:id="@+id/btnNewRegistration"
             android:layout_weight="1"
             android:onClick="gotoNameActivity"
             android:textSize="30sp"
             android:layout_marginTop="20dp" />
 
         <Button
-            android:text="View Data"
+            android:text="View All"
             android:layout_width="match_parent"
             android:layout_height="10dp"
-            android:id="@+id/btnListe"
+            android:id="@+id/btnViewAllRegistrations"
             android:layout_weight="1"
             android:textSize="30sp"
             android:layout_marginTop="20dp" />

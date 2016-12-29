@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_birthdate"
+    android:id="@+id/activity_nationality"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="at.reservoirdogs.resifo_android.BirthdateActivity">
+    tools:context="at.reservoirdogs.resifo_android.NationalityActivity">
 
     <LinearLayout
         android:orientation="vertical"
@@ -18,30 +18,17 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
-        <LinearLayout
-            android:orientation="horizontal"
+        <TextView
+            android:text="Nationality"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:id="@+id/txtViewNationality"
+            android:textSize="24sp" />
 
-            <TextView
-                android:text="Birthdate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/txtViewBirthDate"
-                android:layout_weight="1"
-                android:textSize="24sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
+        <Spinner
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <DatePicker
-                android:layout_width="wrap_content"
-                android:layout_height="256dp"
-                android:id="@+id/datePicker2" />
-        </LinearLayout>
+            android:layout_height="wrap_content"
+            android:id="@+id/nationalitySpinner" />
 
         <LinearLayout
             android:orientation="horizontal"
@@ -52,17 +39,18 @@
                 android:text="Back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/btnBackBirthDate"
+                android:id="@+id/btnBackNationality"
                 android:layout_weight="1"
-                android:onClick="gotoNameActivity"/>
+                android:onClick="gotoMaritalstatusActivity"/>
 
             <Button
                 android:text="Continue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/btnContinueBirthDate"
+                android:id="@+id/btnContinueNationality"
                 android:layout_weight="1"
-                android:onClick="gotoGenderActivity"/>
+                android:onClick="gotoRegistrationActivity"/>
+
         </LinearLayout>
 
         <LinearLayout
@@ -74,17 +62,16 @@
                 android:text="Home"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/btnHomeBirthDate"
+                android:id="@+id/btnHomeNationality"
                 android:layout_weight="1"
                 android:onClick="gotoMainActivity"/>
+
             <Button
                 android:text="View"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/btnViewBirthDate"
+                android:id="@+id/btnViewNationality"
                 android:layout_weight="1"/>
-
         </LinearLayout>
-
     </LinearLayout>
 </RelativeLayout>

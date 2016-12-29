@@ -22,6 +22,9 @@
         <activity android:name=".ReligionActivity" />
         <activity android:name=".BirthplaceActivity" />
         <activity android:name=".MaritalstatusActivity" />
+        <activity android:name=".NationalityActivity" />
+        <activity android:name=".RegistrationActivity" />
+        <activity android:name=".OthermainresidenceActivity"></activity>
     </application>
 
 </manifest>
