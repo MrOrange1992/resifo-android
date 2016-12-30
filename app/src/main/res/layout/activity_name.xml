@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/editTextVorname" />
+            android:id="@+id/editTextFirstname" />
 
         <TextView
             android:text="Lastname"
@@ -45,10 +45,10 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/editTextNachname" />
+            android:id="@+id/editTextLastname" />
 
         <TextView
-            android:text="Family name befor first marriage"
+            android:text="Lastname before first marriage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textView"
@@ -59,7 +59,7 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/editText" />
+            android:id="@+id/editTextNameBefore" />
 
         <LinearLayout
             android:orientation="horizontal"

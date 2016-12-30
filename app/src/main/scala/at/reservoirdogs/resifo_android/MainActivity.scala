@@ -7,10 +7,13 @@ import android.view.View
 
 class MainActivity extends AppCompatActivity
 {
+
+
   override protected def onCreate(savedInstanceState: Bundle)
   {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_main)
+
   }
 
   def gotoNameActivity(view: View): Unit = startActivity(new Intent(this, classOf[NameActivity]))
