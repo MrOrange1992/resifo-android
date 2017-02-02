@@ -16,3 +16,4 @@ efellner;30.01.2017;1.0h;Renaming scala source package, correcting dependencies
 pgoeschl;30.01.2017;1.0h;Renaming scala source package, correcting dependencies
 frauchenwald;01.02.2017;4.0h;Ported project to scala, created activities with small edits to all existing layout xmls (element IDs), created classes Person and RegDB, integrated DB from https://github.com/rladstaetter/android-sqlite
 frauchenwald;02.02.2017;1.0h;Created Repository resifo-android on https://github.com/MrOrange1992
+pgoeschl;02.02.2017;1.0h;Creating Activities, layout
