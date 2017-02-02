@@ -1,19 +1,15 @@
-# Reservoir Dogs
+Team-members:
 
-Project team for creating an android app which helps entering data
-for a residence registration form ("Meldezettel").
+Wolf Markus
+-Teamleader
 
-### MrOrange1992
-- Team Leader
-- Time management
-- Implementation
+Fellner Elisabeth
 
-## MrPink1992
-- Prototype / Proposal
-- Design
+Göschl Philipp
 
-## MrBrown1992
-- Design
-- Costs
-- Implementation
+Rauchenwald Felix
 
+
+
+You have the option to work in a team for this assignment. At most, 4 students can work in one team. If you choose
+to do so, each team member should have its role explained in a file named "Team.md".

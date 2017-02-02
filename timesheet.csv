@@ -1,4 +1,16 @@
 Person;Date;Hours;Description
-frauchenwald;20161216;1;Setup of project
-frauchenwald;20161217;2;Ported project to scala
-frauchenwald;20161219;1;updated proposal readme team license
+mwolf;14.12.2016;1.0h;Created project, created required .txt and .md files, Created Layout for Welcome Page (mainactivity)
+mwolf;16.12.2016;0.5h;Repository changed from android-resifo to resifo-android, Member roles discussed, added Teammembers as collaborators
+mwolf;21.12.2016;2h; Paperprototype
+pgoeschl;21.12.2016;2.0h;Paperprototype
+mgrainer;21.12.2016;2.0h;Paperprototype
+efellner;21.12.2016;2.0h;Paperprototype
+mwolf;22.12.2016;0.5h;Created a first InputActivity to get a general impression how to the layout of the Inputactivities can be done
+mwolf;23.12.2016;1h;Changed filenames of the .md files to match the test requirements, started with cost estimation, uploaded the paper-prototype images into the proposal.md, project planning and costs estimation
+pgoeschl;23.12.2016;1h;Project planning and costs estimation
+
+
+
+
+
+frauchenwald;01.02.2017;5h;Ported project to scala, edits on all layout xmls

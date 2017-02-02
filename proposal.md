@@ -1,59 +1,60 @@
-# Proposal / Prototype
+Prototype informations
 
-## 1 Welcome screen
-- Two options (buttons)
-  - START -> Wizard like
-  - VIEW DATA -> ListView -> only if already data stored from user input
-
-<img src="images/HomeView.png" height="800" width="400" alt="Screenshot"/>
-
-
-## 2 Edit wizard
-Activities based on single edit elements, so user does not have to
-scroll down and accidentially hit wrong fields.
-Each activity has 3 buttons for enter, home and back at the bottom. Maybe adding a
-progress bar for user to see how much is left.
-
-If enter button (check) <br>
--> save entry in DB <br>
-If back button (X) <br>
--> overwrite DB entry if TextChanged on next continue <br>
-If home button  <br>
--> back to welcome screen
-
-<img src="images/StandardWizardView.png" height="800" width="400" alt="Screenshot"/>
+Requirements:
+You have to design a prototype of your app and place it in a pdf named proposal.md in the base of the project directory.
+By viewing this md, it should be clear how your application will look like. An estimation on costs should be given
+in tabular form which will give an estimation about how long you plan to work on certain aspects of the application.
+Think about what your time is worth and give an offer in Euro which describes what a customer would be charged to pay
+for your app.
 
 
-### Elements chronologicaly
+Basic Design of the Frontend:
 
-##### Firstname and Lastname
-- Check invalid inputs like numbers.
+![Image1](docs/prototype1.jpg)
 
-##### Birthdate
-- Useage of widget for scrolling the year month and day
-so user does not have type manually.
+![Image2](/docs/prototype2.jpg)
 
-##### Gender
-- Usage of 2 radio buttons for male and female.
+![Image3](docs/prototype3.jpg)
 
-##### Religion
-- Maybe checkbox with pre defined religions and an other-editText.
+![Image4](docs/prototype4.jpg)
 
-##### Place of birth
-- GEO API
+![Image5](docs/prototype5.jpg)
 
-##### Family status
-- RadioButtons
+![Image6](docs/prototype6.jpg)
 
-##### Citizenship
-- ScrollView
+[Images as PDF](docs/prototype.pdf)
 
-### etc...
+Cost estimation:
 
+For the costs we are calculating a payment of 20€ per hour per person, because we think this is a
+realistic value based on previous experiences and considering that a hour of a programmer at an
+IT-companycosts about 80-100€, so all 4 of us togehter should be worth at least as much.
 
-## 3 ListView
+The baselayout for our calculations was this  [Application Development Project Work Breakdown Structure](http://www.theprojectdiva.com/application-development-project-work-breakdown-structure/)
 
-The app also has a listview Activity to show the current status of completion.
-It is possible to edit the data directly in the listview or in the wizard.
+* 1.1. Application Development Project Management (4h)
+    * 1.1.2. Resource Management Plan 2h
+    * 1.1.3. Scope Development 0.5h
+    * 1.1.6. Budget 0.5h
+    * 1.1.7. Scheduling 0.5h
+    * 1.1.8. Document Change Control Processes 0.5h
+* 1.2. Application Architecture (22h)
+    * 1.2.1. Functional Specifications
+        * 1.2.1.1. Process Models 10h
+        * 1.2.1.2. User Interface 8h
+        * 1.2.1.3. Database Model 4h
+* 1.3. Application Development (88h)
+    * 1.3.1. Setup Development Environment 8h
+    * 1.3.2. UI Development 30h
+    * 1.3.3. Code Development 50h
+* 1.4. Application Testing (20h)
+    * 1.4.1. Test Environment Setup 4h
+    * 1.4.2. Unit Testing 10h
+    * 1.4.3. Results Reporting 6h
+* 1.5. Application Deployment  (8h)
+    * 1.5.1. Documentation
+        * 1.5.1.1. End User Documentation 8h
 
-<img src="images/Listview.png" height="800" width="400" alt="Screenshot"/>
+Alltogether: 142h
+Costs 142h * 20€/h = 2840€
+Considering that there might be unexpected problems our proposal would be 3000€ for the whole project.

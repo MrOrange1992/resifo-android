@@ -14,38 +14,97 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:weightSum="1">
 
-        <TextView
-            android:text="Residence Registration"
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:id="@+id/txtViewResidenceRegistration"
-            android:layout_weight="1"
-            android:textAlignment="center"
-            android:textSize="36sp"
-            android:textStyle="normal|bold" />
+            android:layout_height="wrap_content">
 
-        <Button
-            android:text="New Registration"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Willkommen!"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:textSize="28sp"
+                android:id="@+id/tvWelcome" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="10dp"
-            android:id="@+id/btnNewRegistration"
-            android:layout_weight="1"
-            android:onClick="gotoNameActivity"
-            android:textSize="30sp"
-            android:layout_marginTop="20dp" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp">
 
-        <Button
-            android:text="View All"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="107dp"
+                android:id="@+id/tvCreators"
+                android:maxLines="6"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:text="In der Meldezettel-App haben Sie die Möglichkeit einen Wohnsitz anzumelden, zu ändern oder eine Liste der Meldungen einzusehen. "
+                android:lines="6"
+                android:elevation="1dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="10dp"
-            android:id="@+id/btnViewAllRegistrations"
-            android:layout_weight="1"
-            android:textSize="30sp"
-            android:layout_marginTop="20dp" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:weightSum="1">
 
+
+            <Button
+                android:text="neuer Eintrag"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:id="@+id/btView"
+                android:onClick="gotoInfoActivity"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="80dp"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:layout_weight="0.14" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp">
+
+
+            <Button
+                android:text="Anzeigen"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:id="@+id/showView"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="80dp"
+                android:textAllCaps="false"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="70dp">
+
+            <Button
+                android:text="About"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/aboutView"
+                android:layout_weight="1"
+                android:onClick="gotoAboutActivity"
+                android:elevation="0dp"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_marginLeft="100dp"
+                android:layout_marginRight="100dp" />
+        </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

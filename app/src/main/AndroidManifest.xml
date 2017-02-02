@@ -15,16 +15,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ListElementsView" />
-        <activity android:name=".NameActivity" />
-        <activity android:name=".BirthdateActivity" />
-        <activity android:name=".GenderActivity" />
-        <activity android:name=".ReligionActivity" />
-        <activity android:name=".BirthplaceActivity" />
-        <activity android:name=".MaritalstatusActivity" />
-        <activity android:name=".NationalityActivity" />
-        <activity android:name=".RegistrationActivity" />
-        <activity android:name=".OthermainresidenceActivity"></activity>
+        <activity android:name=".AboutActivity" />
+        <activity android:name=".InfoActivity" />
+        <activity android:name=".Input1Activity" />
+        <activity android:name=".Input2Activity" />
+        <activity android:name=".Wohnsitz1Activity"></activity>
     </application>
 
 </manifest>

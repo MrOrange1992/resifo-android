@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_wohnsitz1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="at.reservoirdogs.resifo_android.Wohnsitz1Activity">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:id="@+id/txtViewStreet"
+                android:maxLines="2"
+                android:lines="2"
+                android:text="Straße"
+                android:textAlignment="center" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:inputType="textPersonName"
+                android:text="Straße"
+                android:ems="10"
+                android:id="@+id/editTextStreet"
+                android:layout_weight="1" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:id="@+id/txtViewHouse"
+                android:maxLines="2"
+                android:lines="2"
+                android:text="Hausnummer:"
+                android:textAlignment="center" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:inputType="textPersonName"
+                android:text="Hausnummer"
+                android:ems="10"
+                android:id="@+id/editTextHouse"
+                android:layout_weight="1" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:id="@+id/txtViewStairs"
+                android:maxLines="2"
+                android:lines="2"
+                android:text="Stiege:"
+                android:textAlignment="center" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:inputType="textPersonName"
+                android:text="Stiege"
+                android:ems="10"
+                android:id="@+id/editTextStairs"
+                android:layout_weight="1" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:id="@+id/txtViewDoor"
+                android:maxLines="2"
+                android:lines="2"
+                android:text="Tür:"
+                android:textAlignment="center" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:inputType="textPersonName"
+                android:text="Tür"
+                android:ems="10"
+                android:id="@+id/editTextDoor"
+                android:layout_weight="1" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:id="@+id/txtViewPLZ"
+                android:maxLines="2"
+                android:lines="2"
+                android:text="PLZ:"
+                android:textAlignment="center" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:inputType="textPersonName"
+                android:text="PLZ"
+                android:ems="10"
+                android:id="@+id/editTextPLZ"
+                android:layout_weight="1" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:id="@+id/txtViewVillage"
+                android:maxLines="2"
+                android:lines="2"
+                android:text="Ort:"
+                android:textAlignment="center" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:inputType="textPersonName"
+                android:text="Ort"
+                android:ems="10"
+                android:id="@+id/editTextVillage"
+                android:layout_weight="1" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:id="@+id/txtViewState"
+                android:maxLines="2"
+                android:lines="2"
+                android:text="Bundesland:"
+                android:textAlignment="center" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:inputType="textPersonName"
+                android:text="Bundesland"
+                android:ems="10"
+                android:id="@+id/editTextState"
+                android:layout_weight="1" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp">
+
+
+            <Button
+                android:text="Aktueller Standort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnCurrentLocation"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp">
+
+
+            <Button
+                android:text="Weiter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnContinue"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
+
