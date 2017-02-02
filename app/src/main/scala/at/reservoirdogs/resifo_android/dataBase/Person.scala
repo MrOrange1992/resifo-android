@@ -12,6 +12,7 @@ class Person(val firstName: String, val lastName: String)
   var religion: String = ""
   var birthPlace: String = ""
   var maritalStatus: String = ""
+
   /*
   var nationality: String
   var zmr: String
