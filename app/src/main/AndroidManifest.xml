@@ -19,7 +19,7 @@
         <activity android:name=".InfoActivity" />
         <activity android:name=".Input1Activity" />
         <activity android:name=".Input2Activity" />
-        <activity android:name=".Wohnsitz1Activity"></activity>
+        <activity android:name=".Wohnsitz1Activity" />
     </application>
 
 </manifest>
