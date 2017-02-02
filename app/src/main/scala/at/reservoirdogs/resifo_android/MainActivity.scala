@@ -16,7 +16,7 @@ class MainActivity extends AppCompatActivity
 
     val p1 = new Person("Flex", "Boy")
 
-    Console.println(p1.firstName)
+    Console.println(p1.getFirstName)
   }
 
   def gotoAboutActivity(view: View): Unit = startActivity(new Intent(this, classOf[AboutActivity]))

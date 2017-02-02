@@ -44,8 +44,8 @@ case class RegDB(context: Context) extends SQLiteOpenHelper(context, RegDB.Name,
   def mkContentValues(p: Person): ContentValues =
   {
     val cv = new ContentValues
-    cv.put("firstname", p.firstName)
-    cv.put("lastname", p.lastName)
+    cv.put("firstname", p.getFirstName)
+    cv.put("lastname", p.getLastName)
     cv
   }
 
@@ -89,7 +89,7 @@ case class RegDB(context: Context) extends SQLiteOpenHelper(context, RegDB.Name,
 
     def deleteByFirstName(firstName: String): Unit = { db.delete("person", "firstname = ?", Array(firstName)) }
 
-    def update(p: Person): Int = { db.update("person", mkContentValues(p), "firstname = ? and lastname = ?", Array(p.firstName, p.lastName)) }
+    def update(p: Person): Int = { db.update("person", mkContentValues(p), "firstname = ? and lastname = ?", Array(p.getFirstName, p.getLastName)) }
 
     /**
       * Returns a list of persons matching given firstName, or Nil if there is none
