@@ -288,6 +288,7 @@
                 android:id="@+id/btnCurrentLocation"
                 android:layout_weight="1" />
 
+
         </LinearLayout>
 
         <LinearLayout
