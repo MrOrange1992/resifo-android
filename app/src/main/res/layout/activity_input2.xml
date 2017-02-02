@@ -63,7 +63,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="45dp"
                 android:inputType="textPersonName"
-                android:text="Anderes Land"
+                android:text=""
                 android:ems="10"
                 android:id="@+id/editTextOtherLand"
                 android:layout_weight="1" />
@@ -130,7 +130,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="45dp"
                 android:inputType="textPersonName"
-                android:text="Art"
+                android:text=""
                 android:ems="10"
                 android:id="@+id/editTextArt"
                 android:layout_weight="1" />
@@ -209,7 +209,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="45dp"
                 android:inputType="textPersonName"
-                android:text="Text"
+                android:text=""
                 android:ems="10"
                 android:id="@+id/editTextAusstellende"
                 android:layout_weight="1" />

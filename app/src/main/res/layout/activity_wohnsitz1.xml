@@ -36,7 +36,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="45dp"
                 android:inputType="textPersonName"
-                android:text="Straße"
+                android:text=""
                 android:ems="10"
                 android:id="@+id/editTextStreet"
                 android:layout_weight="1" />
@@ -63,7 +63,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="45dp"
                 android:inputType="textPersonName"
-                android:text="Hausnummer"
+                android:text=""
                 android:ems="10"
                 android:id="@+id/editTextHouse"
                 android:layout_weight="1" />
@@ -90,7 +90,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="45dp"
                 android:inputType="textPersonName"
-                android:text="Stiege"
+                android:text=""
                 android:ems="10"
                 android:id="@+id/editTextStairs"
                 android:layout_weight="1" />
@@ -117,7 +117,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="45dp"
                 android:inputType="textPersonName"
-                android:text="Tür"
+                android:text=""
                 android:ems="10"
                 android:id="@+id/editTextDoor"
                 android:layout_weight="1" />
@@ -144,7 +144,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="45dp"
                 android:inputType="textPersonName"
-                android:text="PLZ"
+                android:text=""
                 android:ems="10"
                 android:id="@+id/editTextPLZ"
                 android:layout_weight="1" />
@@ -171,7 +171,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="45dp"
                 android:inputType="textPersonName"
-                android:text="Ort"
+                android:text=""
                 android:ems="10"
                 android:id="@+id/editTextVillage"
                 android:layout_weight="1" />
@@ -198,7 +198,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="45dp"
                 android:inputType="textPersonName"
-                android:text="Bundesland"
+                android:text=""
                 android:ems="10"
                 android:id="@+id/editTextState"
                 android:layout_weight="1" />

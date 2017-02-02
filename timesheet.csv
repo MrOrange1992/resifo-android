@@ -13,4 +13,5 @@ pgoeschl;23.12.2016;1h;Project planning and costs estimation
 
 
 
-frauchenwald;01.02.2017;5h;Ported project to scala, edits on all layout xmls
+frauchenwald;01.02.2017;4h;Ported project to scala, small edits on all layout xmls (element IDs)
+frauchenwald;02.02.2017;1h;Created Repository for resifo-android on https://github.com/MrOrange1992 with dB integration from https://github.com/rladstaetter/android-sqlite.git
