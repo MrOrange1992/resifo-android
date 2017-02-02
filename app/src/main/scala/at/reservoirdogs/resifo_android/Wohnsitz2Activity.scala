@@ -9,4 +9,3 @@ class Wohnsitz2Activity extends AppCompatActivity {
     setContentView(R.layout.activity_wohnsitz2)
   }
 }
-
