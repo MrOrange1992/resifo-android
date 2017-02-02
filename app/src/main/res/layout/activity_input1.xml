@@ -30,7 +30,7 @@
                 android:id="@+id/txtViewFamilyName"
                 android:maxLines="2"
                 android:lines="2"
-                android:text="Familienname, akad Grad:"
+                android:text="Akad Grad:"
                 android:textAlignment="center" />
 
             <EditText
@@ -39,34 +39,7 @@
                 android:inputType="textPersonName"
                 android:text=""
                 android:ems="10"
-                android:id="@+id/editTextFamilyname"
-                android:layout_weight="1" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="45dp"
-                android:id="@+id/txtViewFirstName"
-                android:maxLines="2"
-                android:lines="2"
-                android:text="Vorname:"
-                android:textAlignment="center" />
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="45dp"
-                android:inputType="textPersonName"
-                android:text=""
-                android:ems="10"
-                android:id="@+id/editTextFirstname"
+                android:id="@+id/editTextAkaGrade"
                 android:layout_weight="1" />
 
 

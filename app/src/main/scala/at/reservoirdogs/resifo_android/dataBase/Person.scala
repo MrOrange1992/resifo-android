@@ -5,15 +5,14 @@ package at.reservoirdogs.resifo_android.dataBase
   */
 class Person(val firstName: String, val lastName: String)
 {
-  //val firstName = firstName
-  /*
-  var degree: String
+  var degree: String = ""
   //var birthDate: ((Short,Short),(Short,Short),(Short,Short)) = ()
-  var birthDate: String
-  var gender: String
-  var religion: String
-  var birthPlace: String
-  var maritalStatus: String
+  var birthDate: String = ""
+  var gender: String = ""
+  var religion: String = ""
+  var birthPlace: String = ""
+  var maritalStatus: String = ""
+  /*
   var nationality: String
   var zmr: String
   var docType: String

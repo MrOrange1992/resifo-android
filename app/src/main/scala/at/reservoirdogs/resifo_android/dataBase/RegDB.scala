@@ -30,16 +30,15 @@ case class RegDB(context: Context) extends SQLiteOpenHelper(context, RegDB.Name,
   def mkPersonDao(): SqlitePersonDao = SqlitePersonDao(getWritableDatabase)
 
 
-  trait BaseDao[T] {
-
+  trait BaseDao[T]
+  {
     def insert(t: T): Long
-
     def update(t: T): Int
-
     // ... and other functions
   }
 
-  def mkContentValues(p: Person): ContentValues = {
+  def mkContentValues(p: Person): ContentValues =
+  {
     val cv = new ContentValues
     cv.put("firstname", p.firstName)
     cv.put("lastname", p.lastName)
@@ -51,8 +50,8 @@ case class RegDB(context: Context) extends SQLiteOpenHelper(context, RegDB.Name,
     *
     * @param db
     */
-  case class SqlitePersonDao(db: SQLiteDatabase) extends BaseDao[Person] {
-
+  case class SqlitePersonDao(db: SQLiteDatabase) extends BaseDao[Person]
+  {
     def init(): Unit = db.execSQL("create table person (id INTEGER PRIMARY KEY ASC, firstname TEXT, lastname TEXT);")
 
     /**
@@ -60,18 +59,15 @@ case class RegDB(context: Context) extends SQLiteOpenHelper(context, RegDB.Name,
       *
       * @param p
       */
-    def insert(p: Person): Long = {
+    def insert(p: Person): Long =
+    {
       val cv: ContentValues = mkContentValues(p)
       db.insert("person", null, cv)
     }
 
-    def deleteByFirstName(firstName: String): Unit = {
-      db.delete("person", "firstname = ?", Array(firstName))
-    }
+    def deleteByFirstName(firstName: String): Unit = { db.delete("person", "firstname = ?", Array(firstName)) }
 
-    def update(p: Person): Int = {
-      db.update("person", mkContentValues(p), "firstname = ? and lastname = ?", Array(p.firstName, p.lastName))
-    }
+    def update(p: Person): Int = { db.update("person", mkContentValues(p), "firstname = ? and lastname = ?", Array(p.firstName, p.lastName)) }
 
     /**
       * Returns a list of persons matching given firstName, or Nil if there is none
