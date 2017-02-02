@@ -5,6 +5,7 @@ import android.database.Cursor
 import android.database.sqlite.{SQLiteDatabase, SQLiteOpenHelper}
 
 import scala.collection.mutable.ListBuffer
+import scala.io.Source
 
 object RegDB { val Name = "registrationDB" }
 
@@ -17,13 +18,16 @@ case class RegDB(context: Context) extends SQLiteOpenHelper(context, RegDB.Name,
 
   override def onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int): Unit = ()
 
-  override def onCreate(db: SQLiteDatabase): Unit = {
+  override def onCreate(db: SQLiteDatabase): Unit =
+  {
+
+    Source.fromFile("./sqlStatements/createPersonTable.sql").getLines().foreach(db.execSQL(_))
+    Source.fromFile("./sqlStatements/createResidenceTable.sql").getLines().foreach(db.execSQL(_))
+
 
     // perform initial setup
-    val personDao = SqlitePersonDao(db)
-
-    personDao.init()
-
+    //val personDao = SqlitePersonDao(db)
+    //personDao.init()
     //for (i <- 1 to 100) personDao.insert(Person.mkRandom)
   }
 
@@ -52,7 +56,25 @@ case class RegDB(context: Context) extends SQLiteOpenHelper(context, RegDB.Name,
     */
   case class SqlitePersonDao(db: SQLiteDatabase) extends BaseDao[Person]
   {
-    def init(): Unit = db.execSQL("create table person (id INTEGER PRIMARY KEY ASC, firstname TEXT, lastname TEXT);")
+    def init(): Unit = db.execSQL("create table person (" +
+      "id INTEGER PRIMARY KEY ASC, " +
+      "firstname TEXT, " +
+      "lastname TEXT, " +
+      "akaGrade TEXT, " +
+      "birthdate TEXT, " +
+      "gender TEXT, " +
+      "religion TEXT, " +
+      "birthplace TEXT, " +
+      "maritalstatus TEXT, " +
+      "nationality TEXT, " +
+      "zmr TEXT, " +
+      "docArt TEXT, " +
+      "docNumber TEXT, " +
+      "docDate TEXT, " +
+      "docState TEXT, " +
+      "residence TEXT, " +
+      "mainResidence TEXT, " +
+      ");")
 
     /**
       * Insert a person to the database.
