@@ -17,12 +17,13 @@ case class RegDB(context: Context) extends SQLiteOpenHelper(context, RegDB.Name,
 
   override def onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int): Unit = ()
 
-  override def onCreate(db: SQLiteDatabase): Unit = {
+  override def onCreate(db: SQLiteDatabase): Unit =
+  {
 
     // perform initial setup
-    val personDao = SqlitePersonDao(db)
+    //val personDao = SqlitePersonDao(db)
 
-    personDao.init()
+    //personDao.init()
 
     //for (i <- 1 to 100) personDao.insert(Person.mkRandom)
   }
@@ -52,7 +53,25 @@ case class RegDB(context: Context) extends SQLiteOpenHelper(context, RegDB.Name,
     */
   case class SqlitePersonDao(db: SQLiteDatabase) extends BaseDao[Person]
   {
-    def init(): Unit = db.execSQL("create table person (id INTEGER PRIMARY KEY ASC, firstname TEXT, lastname TEXT);")
+    def init(): Unit = db.execSQL("create table person (" +
+      "id INTEGER PRIMARY KEY ASC, " +
+      "firstname TEXT, " +
+      "lastname TEXT, " +
+      "akaGrade TEXT, " +
+      "birthdate TEXT, " +
+      "gender TEXT, " +
+      "religion TEXT, " +
+      "birthplace TEXT, " +
+      "maritalstatus TEXT, " +
+      "nationality TEXT, " +
+      "zmr TEXT, " +
+      "docArt TEXT, " +
+      "docNumber TEXT, " +
+      "docDate TEXT, " +
+      "docState TEXT, " +
+      "residence TEXT, " +
+      "mainResidence TEXT, " +
+      ");")
 
     /**
       * Insert a person to the database.
