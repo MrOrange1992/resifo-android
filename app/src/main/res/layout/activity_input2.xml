@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_input2"
     android:layout_width="match_parent"
@@ -31,28 +32,34 @@
                 android:lines="2"
                 android:text="Staatsangehörigkeit"
                 android:textAlignment="center" />
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-                <LinearLayout
-                    android:orientation="horizontal"
+
+
+
+                <RadioGroup
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
 
                     <RadioButton
                         android:text="Österreich"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/radioButtonCitizenshipAustria" />
+                        android:id="@+id/radioButtonCitizenshipAustria"
+                        android:checked="true"
+                        android:layout_weight="1"
+                        android:onClick="disableResidenceField" />
 
                     <RadioButton
                         android:text="Andere"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/radioButtonCitizenshipOther" />
+                        android:id="@+id/radioButtonCitizenshipOther"
+                        android:checked="false"
+                        android:layout_weight="1"
+                        android:onClick="enableResidenceField" />
+                </RadioGroup>
 
-                </LinearLayout>
-            </RadioGroup>
+
 
         </LinearLayout>
 
@@ -69,7 +76,9 @@
                 android:text=""
                 android:ems="10"
                 android:id="@+id/editTextOtherLand"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:enabled="false"
+                android:editable="false" />
 
 
         </LinearLayout>
