@@ -368,6 +368,15 @@
                     android:text="Reisedokument bei Fremden:"
                     android:textAlignment="center" />
 
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text=""
+                    android:ems="10"
+                    android:id="@+id/editTextDocument"
+                    android:layout_weight="1" />
+
                 <Button
                     android:text="Button"
                     android:id="@+id/editButtonDocument"
@@ -987,12 +996,12 @@
                 android:layout_height="match_parent">
 
                 <Button
-                    android:text="Button"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:id="@+id/deleteButton"
                     android:layout_weight="1"
-                    android:background="@drawable/delete_button" />
+                    android:background="@drawable/delete_button"
+                    android:textAlignment="textEnd" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
