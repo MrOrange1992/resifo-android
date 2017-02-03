@@ -184,14 +184,15 @@
 
 
             <Button
-                android:text="Weiter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/btnContinue"
                 android:layout_weight="1"
                 android:background="@drawable/roundbutton"
-                android:onClick="gotoInput2Activity" />
+                android:onClick="gotoInput2Activity"
+                android:text="Weiter" />
 
         </LinearLayout>
+
     </LinearLayout>
 </RelativeLayout>
