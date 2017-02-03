@@ -231,27 +231,26 @@
 
             <RadioGroup
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:id="@+id/radioGroup">
 
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <RadioButton
+                    android:text="Ja"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButtonMainResidenceYes"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:elevation="24dp" />
 
-                    <RadioButton
-                        android:text="Ja"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/radioButtonMainResidenceYes"
-                        android:layout_weight="1" />
+                <RadioButton
+                    android:text="Nein"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButtonMainResidenceNo"
+                    android:layout_weight="1" />
 
-                    <RadioButton
-                        android:text="Nein"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/radioButtonMainResidenceNo"
-                        android:layout_weight="1" />
-                </LinearLayout>
             </RadioGroup>
 
         </LinearLayout>
@@ -284,6 +283,7 @@
                 android:text="Weiter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="continueTo"
                 android:id="@+id/btnContinue"
                 android:paddingTop="0dp"
                 android:background="@drawable/roundbutton"
