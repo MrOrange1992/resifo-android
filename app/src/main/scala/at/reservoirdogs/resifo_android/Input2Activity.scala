@@ -24,4 +24,5 @@ class Input2Activity extends AppCompatActivity
   def disableResidenceField(view: View): Unit = {
     findViewById(R.id.editTextOtherLand).setEnabled(false)
   }
+
 }

@@ -13,7 +13,11 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:weightSum="1">
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
 
         <LinearLayout
             android:orientation="horizontal"
@@ -48,7 +52,7 @@
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="376dp"
                         android:id="@+id/txtInfoForUser"
                         android:text="1. Eine Anmeldung ist innerhalb von drei Tagen ab Beziehen der Unterkunft, eine Abmeldung innerhalb von drei Tagen vor oder nach Aufgabe der Unterkunft vorzunehmen. 2. Bei der Anmeldung benötigen Sie folgende Dokumente: - Öffentliche Urkunden, aus denen Familien- oder Nach- und Vornamen, Familiennamen vor der ersten Eheschließung, Geburtsdatum, Geburtsort und Staatsangehörigkeit des Unterkunftnehmers hervorgehen, z. B. Reisepass und Geburtskunde; - Unterkunftnehmer, die nicht die österreichische Staatsbürgerschaft besitzen (Fremde): Reisedokument (z. B. Reisepass); - wenn an der bisherigen Unterkunft aus dem Hauptwohnsitz ein „weiterer Wohnsitz“ wird, ist vor oder gleichzeitig mit Anmeldung des neuen Hauptwohnsitzes eine Ummeldung des bisherigen Hauptwohnsitzes erforderlich. 3. Für den Inhalt des Meldezettels ist, unabhängig davon, wer den Meldezettel ausfüllt, immer der Meldepflichtige verantwortlich. Kontrollieren Sie daher bitte den Meldezettel auf Vollständigkeit und Richtigkeit der Eintragungen, auch dann, wenn er von der Behörde ausgefertigt wird. 4. Ihr Hauptwohnsitz ist an jener Unterkunft begründet, an der Sie sich in der Absicht niedergelassen haben, diese zum Mittelpunkt Ihrer Lebensbeziehungen zu machen; trifft diese sachliche Voraussetzung auf mehrere Wohnsitze zu, so haben Sie jenen als Hauptwohnsitz zu bezeichnen, zu dem Sie das überwiegende Naheverhältnis haben. Für den „Mittelpunkt der Lebensbeziehung“ sind vor allem folgende Bestimmungskriterien maßgeblich: Aufenthaltsdauer, Lage des Arbeitsplatzes oder der Ausbildungsstätte, Ausgangspunkt des Weges zum Arbeitsplatz oder zur Ausbildungsstätte, Wohnsitz der übrigen, insbesondere der minderjährigen Familienangehörigen und der Ort, an dem sie ihrer Erwerbstätigkeit nachgehen, ausgebildet werden oder die Schule oder den Kindergarten besuchen, Funktionen in öffentlichen und privaten Körperschaften. Der Hauptwohnsitz ist für die Eintragung in die „Wählerevidenz“ sowie für verschiedene andere Rechtsbereiche (z. B. Kfz-Zulassung, waffenrechtliche Urkunden, Sozialhilfe) maßgeblich. 5. Bedenken Sie bitte, dass eine Änderung des Hauptwohnsitzes oder eines weiteren Wohnsitzes auch noch weitere Mitteilungspflichten (z. B. Kfz-Zulassung) begründen kann. "
                         android:textSize="12sp"
