@@ -46,7 +46,7 @@
                     android:inputType="textPersonName"
                     android:text=""
                     android:ems="10"
-                    android:id="@+id/editTextAkaGrade"
+                    android:id="@+id/editTextFamilyName"
                     android:layout_weight="1" />
 
                 <Button
@@ -68,7 +68,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="45dp"
-                    android:id="@+id/txtViewBirthdate"
+                    android:id="@+id/txtViewFirstname"
                     android:maxLines="2"
                     android:lines="2"
                     android:text="Vorname:"
@@ -77,11 +77,84 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:inputType="textPersonName|date"
+                    android:inputType="textPersonName"
                     android:ems="10"
-                    android:id="@+id/editBirthdate"
+                    android:id="@+id/editFirstname"
+                    android:layout_weight="1"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:text="Button"
+                    android:id="@+id/editButtonFirstname"
+                    android:background="@drawable/edit_button"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:id="@+id/txtViewAkadGrade"
+                    android:maxLines="2"
+                    android:lines="2"
+                    android:text="Akad. Grad:"
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/editTextAkadGrade"
                     android:layout_weight="1" />
 
+                <Button
+                    android:text="Button"
+                    android:id="@+id/editButtonAkadGrade"
+                    android:background="@drawable/edit_button"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/LinearLayout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:id="@+id/txtViewBirthday"
+                    android:maxLines="2"
+                    android:lines="2"
+                    android:text="Geburtsdatum"
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:inputType="date"
+                    android:text=""
+                    android:ems="10"
+                    android:id="@+id/editTextBirthday"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:text="Button"
+                    android:id="@+id/editButtonBirthday"
+                    android:background="@drawable/edit_button"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
 
             </LinearLayout>
 
@@ -97,17 +170,24 @@
                     android:id="@+id/txtViewGender"
                     android:maxLines="2"
                     android:lines="2"
-                    android:text="Akad. Grad:"
+                    android:text="Geschlecht"
                     android:textAlignment="center" />
 
                 <EditText
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="45dp"
                     android:inputType="textPersonName"
+                    android:text=""
                     android:ems="10"
-                    android:id="@+id/editText2"
+                    android:id="@+id/editTextGender"
                     android:layout_weight="1" />
 
+                <Button
+                    android:text="Button"
+                    android:id="@+id/editButtonGender"
+                    android:background="@drawable/edit_button"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
 
             </LinearLayout>
 
@@ -115,8 +195,7 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:id="@+id/LinearLayout">
+                android:layout_marginTop="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -124,18 +203,24 @@
                     android:id="@+id/txtViewReligion"
                     android:maxLines="2"
                     android:lines="2"
-                    android:text="Geburtsdatum"
+                    android:text="Religionsbekenntnis:"
                     android:textAlignment="center" />
 
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="45dp"
-                    android:inputType="textPersonName|date"
+                    android:inputType="textPersonName"
                     android:text=""
                     android:ems="10"
                     android:id="@+id/editTextReligion"
                     android:layout_weight="1" />
 
+                <Button
+                    android:text="Button"
+                    android:id="@+id/editButtonReligion"
+                    android:background="@drawable/edit_button"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
 
             </LinearLayout>
 
@@ -151,7 +236,7 @@
                     android:id="@+id/txtViewBirthPlace"
                     android:maxLines="2"
                     android:lines="2"
-                    android:text="Geschlecht"
+                    android:text="Geburtsort:"
                     android:textAlignment="center" />
 
                 <EditText
@@ -160,9 +245,14 @@
                     android:inputType="textPersonName"
                     android:text=""
                     android:ems="10"
-                    android:id="@+id/editTextBirthplace"
+                    android:id="@+id/editTextBirthPlace"
                     android:layout_weight="1" />
-
+                <Button
+                    android:text="Button"
+                    android:id="@+id/editButtonBirthPlace"
+                    android:background="@drawable/edit_button"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
 
             </LinearLayout>
 
@@ -178,7 +268,7 @@
                     android:id="@+id/txtViewMaritalStatus"
                     android:maxLines="2"
                     android:lines="2"
-                    android:text="Religionsbekenntnis:"
+                    android:text="Familienstand"
                     android:textAlignment="center" />
 
                 <EditText
@@ -190,6 +280,12 @@
                     android:id="@+id/editTextMaritalStatus"
                     android:layout_weight="1" />
 
+                <Button
+                    android:text="Button"
+                    android:id="@+id/editButtonMartialStatus"
+                    android:background="@drawable/edit_button"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
 
             </LinearLayout>
 
@@ -202,34 +298,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="45dp"
-                    android:id="@+id/txtViewFamilyName"
-                    android:maxLines="2"
-                    android:lines="2"
-                    android:text="Geburtsort:"
-                    android:textAlignment="center" />
-
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="45dp"
-                    android:inputType="textPersonName"
-                    android:text=""
-                    android:ems="10"
-                    android:id="@+id/editTextAkaGrade"
-                    android:layout_weight="1" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="45dp"
-                    android:id="@+id/txtViewFamilyName"
+                    android:id="@+id/txtViewNationality"
                     android:maxLines="2"
                     android:lines="2"
                     android:text="Staatsangehörigkeit:"
@@ -241,10 +310,15 @@
                     android:inputType="textPersonName"
                     android:text=""
                     android:ems="10"
-                    android:id="@+id/editTextAkaGrade"
+                    android:id="@+id/editTextNationality"
                     android:layout_weight="1" />
 
-
+                <Button
+                    android:text="Button"
+                    android:id="@+id/editButtonNationality"
+                    android:background="@drawable/edit_button"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -256,10 +330,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="45dp"
-                    android:id="@+id/txtViewFamilyName"
+                    android:id="@+id/txtViewZRMNumber"
                     android:maxLines="2"
                     android:lines="2"
-                    android:text="Familienname:"
+                    android:text="ZRM Nummer:"
                     android:textAlignment="center" />
 
                 <EditText
@@ -268,36 +342,14 @@
                     android:inputType="textPersonName"
                     android:text=""
                     android:ems="10"
-                    android:id="@+id/editTextAkaGrade"
+                    android:id="@+id/editZRMNumber"
                     android:layout_weight="1" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="45dp"
-                    android:id="@+id/txtViewFamilyName"
-                    android:maxLines="2"
-                    android:lines="2"
-                    android:text="Familienname:"
-                    android:textAlignment="center" />
-
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="45dp"
-                    android:inputType="textPersonName"
-                    android:text=""
-                    android:ems="10"
-                    android:id="@+id/editTextAkaGrade"
-                    android:layout_weight="1" />
-
+                <Button
+                    android:text="Button"
+                    android:id="@+id/editButtonZRMNumber"
+                    android:background="@drawable/edit_button"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
 
             </LinearLayout>
 
@@ -315,7 +367,16 @@
                     android:lines="2"
                     android:text="Reisedokument bei Fremden:"
                     android:textAlignment="center" />
+
+                <Button
+                    android:text="Button"
+                    android:id="@+id/editButtonDocument"
+                    android:background="@drawable/edit_button"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
+
             </LinearLayout>
+
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
@@ -340,7 +401,12 @@
                     android:id="@+id/editTextArt"
                     android:layout_weight="1" />
 
-
+                <Button
+                    android:text="Button"
+                    android:id="@+id/editButtonArt"
+                    android:background="@drawable/edit_button"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -366,7 +432,12 @@
                     android:id="@+id/editTextNumber"
                     android:layout_weight="1" />
 
-
+                <Button
+                    android:text="Button"
+                    android:id="@+id/editButtonNumber"
+                    android:background="@drawable/edit_button"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -392,6 +463,12 @@
                     android:id="@+id/editTextAusstellDate"
                     android:layout_weight="1" />
 
+                <Button
+                    android:text="Button"
+                    android:id="@+id/editButtonAustellDate"
+                    android:background="@drawable/edit_button"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
 
             </LinearLayout>
 
@@ -419,7 +496,12 @@
                     android:id="@+id/editTextAusstellende"
                     android:layout_weight="1" />
 
-
+                <Button
+                    android:text="Button"
+                    android:id="@+id/editButtonAustellende"
+                    android:background="@drawable/edit_button"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -431,7 +513,7 @@
                     android:text="Hauptwohnsitz"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textViewNebenwohnsitz"
+                    android:id="@+id/textViewHauptwohnsitz"
                     android:layout_weight="1"
                     android:textSize="16sp" />
             </LinearLayout>
@@ -460,7 +542,12 @@
                     android:layout_weight="1"
                     android:layout_height="45dp" />
 
-
+                <Button
+                    android:text="Button"
+                    android:id="@+id/editButtonStreet"
+                    android:background="@drawable/edit_button"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -487,7 +574,12 @@
                     android:layout_weight="1"
                     android:layout_height="45dp" />
 
-
+                <Button
+                    android:text="Button"
+                    android:id="@+id/editButtonHouse"
+                    android:background="@drawable/edit_button"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -513,7 +605,12 @@
                     android:id="@+id/editTextStairs"
                     android:layout_weight="1"
                     android:layout_height="45dp" />
-
+                <Button
+                    android:text="Button"
+                    android:id="@+id/editButtonStairs"
+                    android:background="@drawable/edit_button"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
 
             </LinearLayout>
 
@@ -540,7 +637,12 @@
                     android:id="@+id/editTextDoor"
                     android:layout_weight="1"
                     android:layout_height="45dp" />
-
+                <Button
+                    android:text="Button"
+                    android:id="@+id/editButtonDoor"
+                    android:background="@drawable/edit_button"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
 
             </LinearLayout>
 
@@ -568,7 +670,12 @@
                     android:layout_weight="1"
                     android:layout_height="45dp" />
 
-
+                <Button
+                    android:text="Button"
+                    android:id="@+id/editButtonPLZ"
+                    android:background="@drawable/edit_button"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -594,7 +701,12 @@
                     android:id="@+id/editTextVillage"
                     android:layout_weight="1"
                     android:layout_height="45dp" />
-
+                <Button
+                    android:text="Button"
+                    android:id="@+id/editButtonVillage"
+                    android:background="@drawable/edit_button"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
 
             </LinearLayout>
 
@@ -622,7 +734,12 @@
                     android:layout_weight="1"
                     android:layout_height="45dp" />
 
-
+                <Button
+                    android:text="Button"
+                    android:id="@+id/editButtonState"
+                    android:background="@drawable/edit_button"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -663,7 +780,12 @@
                     android:layout_weight="1"
                     android:layout_height="45dp" />
 
-
+                <Button
+                    android:text="Button"
+                    android:id="@+id/editButtonStreetNebenwohnsitz"
+                    android:background="@drawable/edit_button"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -689,7 +811,12 @@
                     android:id="@+id/editTextHouseNebenwohnsitz"
                     android:layout_weight="1"
                     android:layout_height="45dp" />
-
+                <Button
+                    android:text="Button"
+                    android:id="@+id/editButtonHouseNebenwohnsitz"
+                    android:background="@drawable/edit_button"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
 
             </LinearLayout>
 
@@ -716,7 +843,12 @@
                     android:id="@+id/editTextStairsNebenwohnsitz"
                     android:layout_weight="1"
                     android:layout_height="45dp" />
-
+                <Button
+                    android:text="Button"
+                    android:id="@+id/editButtonStairsNebenwohnsitz"
+                    android:background="@drawable/edit_button"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
 
             </LinearLayout>
 
@@ -744,7 +876,12 @@
                     android:layout_weight="1"
                     android:layout_height="45dp" />
 
-
+                <Button
+                    android:text="Button"
+                    android:id="@+id/editButtonDoorNebenwohnsitz"
+                    android:background="@drawable/edit_button"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -770,7 +907,12 @@
                     android:id="@+id/editTextPLZNebenwohnsitz"
                     android:layout_weight="1"
                     android:layout_height="45dp" />
-
+                <Button
+                    android:text="Button"
+                    android:id="@+id/editButtonPLZNebenwohnsitz"
+                    android:background="@drawable/edit_button"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
 
             </LinearLayout>
 
@@ -798,7 +940,12 @@
                     android:layout_weight="1"
                     android:layout_height="45dp" />
 
-
+                <Button
+                    android:text="Button"
+                    android:id="@+id/editButtonVillageNebenwohnsitz"
+                    android:background="@drawable/edit_button"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -825,7 +972,27 @@
                     android:layout_weight="1"
                     android:layout_height="45dp" />
 
+                <Button
+                    android:text="Button"
+                    android:id="@+id/editButtonStateNebenwohnsitz"
+                    android:background="@drawable/edit_button"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
 
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:text="Button"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:id="@+id/deleteButton"
+                    android:layout_weight="1"
+                    android:background="@drawable/delete_button" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
