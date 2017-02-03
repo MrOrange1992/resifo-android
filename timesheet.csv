@@ -18,4 +18,5 @@ frauchenwald;01.02.2017;4.0h;Ported project to scala, created activities with sm
 frauchenwald;02.02.2017;1.0h;Created Repository resifo-android on https://github.com/MrOrange1992
 pgoeschl;02.02.2017;1.0h;Creating Activities, layout
 pgoeschl;02.02.2017;0.5h;Created the last two activities
-
+efellner;02.02.2017;1.0h;Implementing Button with round corners
+efellner;03.02.2017;1.0h;Pictures for the different buttons, creating view activity
