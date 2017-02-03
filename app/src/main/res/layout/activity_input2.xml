@@ -233,6 +233,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/btnContinue"
                 android:layout_weight="1"
+                android:background="@drawable/roundbutton"
                 android:onClick="gotoWohnsitz1Activity" />
 
         </LinearLayout>

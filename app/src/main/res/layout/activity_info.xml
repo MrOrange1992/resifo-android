@@ -115,6 +115,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/btnVerstanden"
                 android:layout_weight="1"
+                android:background="@drawable/roundbutton"
                 android:onClick="gotoInput1Activity" />
 
         </LinearLayout>

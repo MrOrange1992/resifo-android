@@ -259,6 +259,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/btnCurrentLocation"
+                android:background="@drawable/roundbutton"
                 android:layout_weight="1" />
 
         </LinearLayout>
@@ -275,6 +276,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/btnContinue"
+                android:paddingTop="0dp"
+                android:background="@drawable/roundbutton"
                 android:layout_weight="1" />
 
         </LinearLayout>

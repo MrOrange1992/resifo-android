@@ -59,32 +59,34 @@
             <Button
                 android:text="neuer Eintrag"
                 android:layout_width="match_parent"
-                android:layout_height="64dp"
                 android:id="@+id/btView"
                 android:onClick="gotoInfoActivity"
-                android:layout_marginLeft="80dp"
-                android:layout_marginRight="80dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginRight="70dp"
+                android:background="@drawable/roundbutton"
                 android:textAllCaps="false"
                 android:textSize="18sp"
-                android:layout_weight="0.14" />
+                android:layout_height="60dp" />
 
         </LinearLayout>
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp">
+            android:layout_marginTop="40dp">
 
 
             <Button
                 android:text="Anzeigen"
                 android:layout_width="match_parent"
-                android:layout_height="64dp"
                 android:id="@+id/showView"
-                android:layout_marginLeft="80dp"
-                android:layout_marginRight="80dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginRight="70dp"
                 android:textAllCaps="false"
-                android:textSize="18sp" />
+                android:background="@drawable/roundbutton"
+                android:textSize="18sp"
+                android:layout_height="60dp" />
+
 
         </LinearLayout>
 
