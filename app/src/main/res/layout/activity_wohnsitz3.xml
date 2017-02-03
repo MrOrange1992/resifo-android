@@ -16,6 +16,14 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/txtViewHeadingWohnsitz3"
+            android:maxLines="2"
+            android:lines="2"
+            android:text="Abmeldung der Unterkunft in"
+            android:textAlignment="center"
+            android:layout_height="20dp" />
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -217,7 +225,7 @@
                 android:lines="2"
                 android:text="Sie verziehen ins Ausland:"
                 android:textAlignment="center"
-                android:layout_height="25dp" />
+                android:layout_height="20dp" />
 
             <RadioGroup
                 android:layout_width="match_parent"
