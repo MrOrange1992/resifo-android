@@ -16,6 +16,11 @@ class Input1Activity extends AppCompatActivity
     setContentView(R.layout.activity_input1)
   }
 
-  def gotoInput2Activity(view: View): Unit = startActivity(new Intent(this, classOf[Input2Activity]))
+
+
+  def gotoInput2Activity(view: View): Unit =
+  {
+    startActivity(new Intent(this, classOf[Input2Activity]))
+  }
 
 }

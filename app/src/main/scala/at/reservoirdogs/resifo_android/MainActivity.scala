@@ -19,6 +19,8 @@ class MainActivity extends AppCompatActivity
     Console.println(p1.getFirstName)
   }
 
+  def gotoPersonListActivity(view: View): Unit = startActivity(new Intent(this, classOf[PersonListActivity]))
+
   def gotoAboutActivity(view: View): Unit = startActivity(new Intent(this, classOf[AboutActivity]))
 
   def gotoInfoActivity(view: View): Unit = startActivity(new Intent(this, classOf[InfoActivity]))

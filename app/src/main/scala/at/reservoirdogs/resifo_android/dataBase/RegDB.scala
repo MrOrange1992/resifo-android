@@ -21,13 +21,14 @@ case class RegDB(context: Context) extends SQLiteOpenHelper(context, RegDB.Name,
   override def onCreate(db: SQLiteDatabase): Unit =
   {
 
-    Source.fromFile("./sqlStatements/createPersonTable.sql").getLines().foreach(db.execSQL(_))
-    Source.fromFile("./sqlStatements/createResidenceTable.sql").getLines().foreach(db.execSQL(_))
+    //TODO CREATE TABLES for RegDB
+    //Source.fromFile("./sqlStatements/createPersonTable.sql").getLines().foreach(db.execSQL(_))
+    //Source.fromFile("./sqlStatements/createResidenceTable.sql").getLines().foreach(db.execSQL(_))
 
 
     // perform initial setup
-    //val personDao = SqlitePersonDao(db)
-    //personDao.init()
+    val personDao = SqlitePersonDao(db)
+    personDao.init()
     //for (i <- 1 to 100) personDao.insert(Person.mkRandom)
   }
 

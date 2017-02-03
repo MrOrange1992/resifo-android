@@ -21,7 +21,8 @@
         <activity android:name=".Input2Activity" />
         <activity android:name=".Wohnsitz1Activity" />
         <activity android:name=".Wohnsitz3Activity" />
-        <activity android:name=".AnmeldeActivity"></activity>
+        <activity android:name=".AnmeldeActivity" />
+        <activity android:name=".PersonListActivity"></activity>
     </application>
 
 </manifest>
