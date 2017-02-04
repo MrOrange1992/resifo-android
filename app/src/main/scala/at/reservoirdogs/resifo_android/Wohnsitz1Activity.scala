@@ -19,12 +19,13 @@ class Wohnsitz1Activity extends AppCompatActivity
     setContentView(R.layout.activity_wohnsitz1)
   }
 
+
+
   def continueTo(view: View): Unit =
   {
     if(findViewById(R.id.radioButtonMainResidenceYes).asInstanceOf[RadioButton].isChecked)
       startActivity(new Intent(this, classOf[Wohnsitz3Activity]))
-    else
-      startActivity(new Intent(this, classOf[Wohnsitz2Activity]))
+    else startActivity(new Intent(this, classOf[Wohnsitz2Activity]))
   }
 
   /*def getAddress: Unit = {

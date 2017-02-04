@@ -13,47 +13,35 @@ import at.reservoirdogs.resifo_android.dataBase.{Person, RegDB}
 class InfoActivity extends AppCompatActivity with Serializable
 {
 
-  var regDB: RegDB = _
+  //var regDB: RegDB = _
 
   override protected def onCreate(savedInstanceState: Bundle)
   {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_info)
-    regDB = RegDB(getApplicationContext)
+    //regDB = RegDB(getApplicationContext)
   }
 
-  def saveToDb(view: View): Boolean =
-  {
-    val firstName: String = findViewById(R.id.editTextFirstname).asInstanceOf[EditText].getText.toString
-    val lastName: String = findViewById(R.id.editTextLastname).asInstanceOf[EditText].getText.toString
-
-    // New Entry for DataBase if Entries not empty
-    if (firstName != "" && lastName != "")
-    {
-      val person: Person = new Person(firstName, lastName)
-
-      //val personDao = regDB.mkPersonDao()
-      //personDao.insert(person)
-
-      //val intent = new Intent(InfoActivity.this, classOf[Input1Activity])
-      //intent.putExtra("Person", person)
-
-      true
-    }
-    else false
-  }
-
+  /*
   def loadFromDb(view: View): Unit =
   {
     //val i = new Intent(this, classOf[MyListActivity])
     //startActivity(i)
   }
+  */
 
   def gotoInput1Activity(view: View): Unit =
   {
-    if (saveToDb(view))
+    val firstName: String = findViewById(R.id.editTextFirstname).asInstanceOf[EditText].getText.toString
+    val lastName: String = findViewById(R.id.editTextLastname).asInstanceOf[EditText].getText.toString
+
+    if (firstName != "" && lastName != "")
     {
-      startActivity(new Intent(this, classOf[Input1Activity]))
+      val person: Person = new Person(firstName, lastName)
+      val InputIntent = new Intent(this, classOf[Input1Activity])
+      InputIntent.putExtra("person", person)
+
+      startActivity(InputIntent)
     }
     else
     {
