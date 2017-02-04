@@ -20,9 +20,11 @@ class Input2Activity extends AppCompatActivity
 
   def enableResidenceField(view: View): Unit = {
     findViewById(R.id.editTextOtherLand).setEnabled(true)
+    findViewById(R.id.editTextOtherLand).setVisibility(View.VISIBLE)
   }
   def disableResidenceField(view: View): Unit = {
     findViewById(R.id.editTextOtherLand).setEnabled(false)
+    findViewById(R.id.editTextOtherLand).setVisibility(View.GONE)
   }
 
 }
