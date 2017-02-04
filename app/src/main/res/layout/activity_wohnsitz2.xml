@@ -301,7 +301,7 @@
                 android:text="Weiter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="continueTo"
+                android:onClick="gotoAnmeldeActivity"
                 android:id="@+id/btnContinue"
                 android:paddingTop="0dp"
                 android:background="@drawable/roundbutton"
