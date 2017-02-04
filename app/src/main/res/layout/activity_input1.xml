@@ -60,13 +60,12 @@
                 android:text="Geburtsdatum:"
                 android:textAlignment="center" />
 
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="date"
-                android:ems="10"
-                android:id="@+id/editBirthdate"
-                android:layout_weight="1" />
+            <DatePicker
+                android:layout_width="match_parent"
+                android:layout_height="94dp"
+                android:id="@+id/datePicker"
+                android:datePickerMode="spinner"
+                android:calendarViewShown="false" />
 
 
         </LinearLayout>
@@ -86,11 +85,25 @@
                 android:text="Geschlecht:"
                 android:textAlignment="center" />
 
-            <Spinner
+            <RadioGroup
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/spinner"
-                android:layout_weight="1" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:text="Männlich"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButtonGenderMale"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Weiblich"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButtonGenderFemale"
+                    android:layout_weight="1" />
+            </RadioGroup>
 
 
         </LinearLayout>
