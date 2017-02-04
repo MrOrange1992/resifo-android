@@ -291,11 +291,11 @@
 
 
             <Button
-                android:layout_width="20dp"
                 android:id="@+id/btnCurrentLocation"
                 android:background="@drawable/map_button"
-                android:layout_weight="4"
-                android:layout_height="40dp" />
+                android:layout_weight="1"
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
 
             <Button
                 android:text="Weiter"
@@ -305,8 +305,8 @@
                 android:id="@+id/btnContinue"
                 android:paddingTop="0dp"
                 android:background="@drawable/roundbutton"
-                android:layout_weight="1"
-                android:layout_marginLeft="30dp" />
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp" />
 
         </LinearLayout>
     </LinearLayout>
