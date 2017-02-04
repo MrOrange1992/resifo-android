@@ -79,7 +79,8 @@
                 android:id="@+id/editTextOtherLand"
                 android:layout_weight="1"
                 android:enabled="false"
-                android:editable="false" />
+                android:editable="false"
+                android:visibility="gone" />
 
 
         </LinearLayout>
