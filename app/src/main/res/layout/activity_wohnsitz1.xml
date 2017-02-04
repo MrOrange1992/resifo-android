@@ -268,7 +268,8 @@
                 android:background="@drawable/map_button"
                 android:layout_weight="1"
                 android:layout_height="40dp"
-                android:layout_width="40dp" />
+                android:layout_width="40dp"
+                android:onClick="getAddress" />
 
             <Button
                 android:text="Weiter"
