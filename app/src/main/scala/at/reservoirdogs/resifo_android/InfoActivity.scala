@@ -32,8 +32,8 @@ class InfoActivity extends AppCompatActivity with Serializable
     {
       val person: Person = new Person(firstName, lastName)
 
-      val personDao = regDB.mkPersonDao()
-      personDao.insert(person)
+      //val personDao = regDB.mkPersonDao()
+      //personDao.insert(person)
 
       //val intent = new Intent(InfoActivity.this, classOf[Input1Activity])
       //intent.putExtra("Person", person)

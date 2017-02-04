@@ -49,13 +49,6 @@
                     android:id="@+id/editTextFamilyName"
                     android:layout_weight="1" />
 
-                <Button
-                    android:text="Button"
-                    android:id="@+id/editButtonLastname"
-                    android:background="@drawable/edit_button"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp" />
-
 
             </LinearLayout>
 
@@ -83,13 +76,6 @@
                     android:layout_weight="1"
                     android:textSize="18sp" />
 
-                <Button
-                    android:text="Button"
-                    android:id="@+id/editButtonFirstname"
-                    android:background="@drawable/edit_button"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp" />
-
             </LinearLayout>
 
             <LinearLayout
@@ -114,13 +100,6 @@
                     android:ems="10"
                     android:id="@+id/editTextAkadGrade"
                     android:layout_weight="1" />
-
-                <Button
-                    android:text="Button"
-                    android:id="@+id/editButtonAkadGrade"
-                    android:background="@drawable/edit_button"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp" />
 
             </LinearLayout>
 
@@ -149,13 +128,6 @@
                     android:id="@+id/editTextBirthday"
                     android:layout_weight="1" />
 
-                <Button
-                    android:text="Button"
-                    android:id="@+id/editButtonBirthday"
-                    android:background="@drawable/edit_button"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp" />
-
             </LinearLayout>
 
             <LinearLayout
@@ -181,13 +153,6 @@
                     android:ems="10"
                     android:id="@+id/editTextGender"
                     android:layout_weight="1" />
-
-                <Button
-                    android:text="Button"
-                    android:id="@+id/editButtonGender"
-                    android:background="@drawable/edit_button"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp" />
 
             </LinearLayout>
 
@@ -215,13 +180,6 @@
                     android:id="@+id/editTextReligion"
                     android:layout_weight="1" />
 
-                <Button
-                    android:text="Button"
-                    android:id="@+id/editButtonReligion"
-                    android:background="@drawable/edit_button"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp" />
-
             </LinearLayout>
 
             <LinearLayout
@@ -247,12 +205,6 @@
                     android:ems="10"
                     android:id="@+id/editTextBirthPlace"
                     android:layout_weight="1" />
-                <Button
-                    android:text="Button"
-                    android:id="@+id/editButtonBirthPlace"
-                    android:background="@drawable/edit_button"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp" />
 
             </LinearLayout>
 
@@ -280,13 +232,6 @@
                     android:id="@+id/editTextMaritalStatus"
                     android:layout_weight="1" />
 
-                <Button
-                    android:text="Button"
-                    android:id="@+id/editButtonMartialStatus"
-                    android:background="@drawable/edit_button"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp" />
-
             </LinearLayout>
 
             <LinearLayout
@@ -313,12 +258,6 @@
                     android:id="@+id/editTextNationality"
                     android:layout_weight="1" />
 
-                <Button
-                    android:text="Button"
-                    android:id="@+id/editButtonNationality"
-                    android:background="@drawable/edit_button"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -344,12 +283,6 @@
                     android:ems="10"
                     android:id="@+id/editZRMNumber"
                     android:layout_weight="1" />
-                <Button
-                    android:text="Button"
-                    android:id="@+id/editButtonZRMNumber"
-                    android:background="@drawable/edit_button"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp" />
 
             </LinearLayout>
 
@@ -377,13 +310,6 @@
                     android:id="@+id/editTextDocument"
                     android:layout_weight="1" />
 
-                <Button
-                    android:text="Button"
-                    android:id="@+id/editButtonDocument"
-                    android:background="@drawable/edit_button"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp" />
-
             </LinearLayout>
 
             <LinearLayout
@@ -410,12 +336,6 @@
                     android:id="@+id/editTextArt"
                     android:layout_weight="1" />
 
-                <Button
-                    android:text="Button"
-                    android:id="@+id/editButtonArt"
-                    android:background="@drawable/edit_button"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -441,12 +361,6 @@
                     android:id="@+id/editTextNumber"
                     android:layout_weight="1" />
 
-                <Button
-                    android:text="Button"
-                    android:id="@+id/editButtonNumber"
-                    android:background="@drawable/edit_button"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -471,13 +385,6 @@
                     android:ems="10"
                     android:id="@+id/editTextAusstellDate"
                     android:layout_weight="1" />
-
-                <Button
-                    android:text="Button"
-                    android:id="@+id/editButtonAustellDate"
-                    android:background="@drawable/edit_button"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp" />
 
             </LinearLayout>
 
@@ -505,12 +412,6 @@
                     android:id="@+id/editTextAusstellende"
                     android:layout_weight="1" />
 
-                <Button
-                    android:text="Button"
-                    android:id="@+id/editButtonAustellende"
-                    android:background="@drawable/edit_button"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -524,7 +425,8 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/textViewHauptwohnsitz"
                     android:layout_weight="1"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    android:paddingTop="30dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -551,12 +453,6 @@
                     android:layout_weight="1"
                     android:layout_height="45dp" />
 
-                <Button
-                    android:text="Button"
-                    android:id="@+id/editButtonStreet"
-                    android:background="@drawable/edit_button"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -583,12 +479,6 @@
                     android:layout_weight="1"
                     android:layout_height="45dp" />
 
-                <Button
-                    android:text="Button"
-                    android:id="@+id/editButtonHouse"
-                    android:background="@drawable/edit_button"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -614,12 +504,6 @@
                     android:id="@+id/editTextStairs"
                     android:layout_weight="1"
                     android:layout_height="45dp" />
-                <Button
-                    android:text="Button"
-                    android:id="@+id/editButtonStairs"
-                    android:background="@drawable/edit_button"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp" />
 
             </LinearLayout>
 
@@ -646,12 +530,6 @@
                     android:id="@+id/editTextDoor"
                     android:layout_weight="1"
                     android:layout_height="45dp" />
-                <Button
-                    android:text="Button"
-                    android:id="@+id/editButtonDoor"
-                    android:background="@drawable/edit_button"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp" />
 
             </LinearLayout>
 
@@ -679,12 +557,6 @@
                     android:layout_weight="1"
                     android:layout_height="45dp" />
 
-                <Button
-                    android:text="Button"
-                    android:id="@+id/editButtonPLZ"
-                    android:background="@drawable/edit_button"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -710,12 +582,6 @@
                     android:id="@+id/editTextVillage"
                     android:layout_weight="1"
                     android:layout_height="45dp" />
-                <Button
-                    android:text="Button"
-                    android:id="@+id/editButtonVillage"
-                    android:background="@drawable/edit_button"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp" />
 
             </LinearLayout>
 
@@ -743,12 +609,6 @@
                     android:layout_weight="1"
                     android:layout_height="45dp" />
 
-                <Button
-                    android:text="Button"
-                    android:id="@+id/editButtonState"
-                    android:background="@drawable/edit_button"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -762,7 +622,8 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/textViewNebenwohnsitz"
                     android:layout_weight="1"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    android:paddingTop="30dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -789,12 +650,6 @@
                     android:layout_weight="1"
                     android:layout_height="45dp" />
 
-                <Button
-                    android:text="Button"
-                    android:id="@+id/editButtonStreetNebenwohnsitz"
-                    android:background="@drawable/edit_button"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -820,12 +675,6 @@
                     android:id="@+id/editTextHouseNebenwohnsitz"
                     android:layout_weight="1"
                     android:layout_height="45dp" />
-                <Button
-                    android:text="Button"
-                    android:id="@+id/editButtonHouseNebenwohnsitz"
-                    android:background="@drawable/edit_button"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp" />
 
             </LinearLayout>
 
@@ -852,12 +701,6 @@
                     android:id="@+id/editTextStairsNebenwohnsitz"
                     android:layout_weight="1"
                     android:layout_height="45dp" />
-                <Button
-                    android:text="Button"
-                    android:id="@+id/editButtonStairsNebenwohnsitz"
-                    android:background="@drawable/edit_button"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp" />
 
             </LinearLayout>
 
@@ -885,12 +728,6 @@
                     android:layout_weight="1"
                     android:layout_height="45dp" />
 
-                <Button
-                    android:text="Button"
-                    android:id="@+id/editButtonDoorNebenwohnsitz"
-                    android:background="@drawable/edit_button"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -916,12 +753,6 @@
                     android:id="@+id/editTextPLZNebenwohnsitz"
                     android:layout_weight="1"
                     android:layout_height="45dp" />
-                <Button
-                    android:text="Button"
-                    android:id="@+id/editButtonPLZNebenwohnsitz"
-                    android:background="@drawable/edit_button"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp" />
 
             </LinearLayout>
 
@@ -949,12 +780,6 @@
                     android:layout_weight="1"
                     android:layout_height="45dp" />
 
-                <Button
-                    android:text="Button"
-                    android:id="@+id/editButtonVillageNebenwohnsitz"
-                    android:background="@drawable/edit_button"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -981,27 +806,29 @@
                     android:layout_weight="1"
                     android:layout_height="45dp" />
 
-                <Button
-                    android:text="Button"
-                    android:id="@+id/editButtonStateNebenwohnsitz"
-                    android:background="@drawable/edit_button"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp" />
-
             </LinearLayout>
 
             <LinearLayout
                 android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp">
 
                 <Button
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
+                    android:id="@+id/editButton"
+                    android:background="@drawable/edit_button"
+                    android:layout_weight="2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="300dp"
+                    android:paddingLeft="10dp" />
+
+                <Button
                     android:id="@+id/deleteButton"
-                    android:layout_weight="1"
+                    android:layout_weight="0.23"
                     android:background="@drawable/delete_button"
-                    android:textAlignment="textEnd" />
+                    android:layout_height="30dp"
+                    android:layout_width="30dp" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
