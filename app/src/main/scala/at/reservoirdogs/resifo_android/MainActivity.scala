@@ -13,10 +13,6 @@ class MainActivity extends AppCompatActivity
   {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_main)
-
-    val p1 = new Person("Flex", "Boy")
-
-    Console.println(p1.getFirstName)
   }
 
   def gotoPersonListActivity(view: View): Unit = startActivity(new Intent(this, classOf[PersonListActivity]))

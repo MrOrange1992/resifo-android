@@ -13,13 +13,15 @@ import at.reservoirdogs.resifo_android.dataBase.{Person, RegDB}
 class InfoActivity extends AppCompatActivity with Serializable
 {
 
-  //var regDB: RegDB = _
+  var regDB: RegDB = _
 
   override protected def onCreate(savedInstanceState: Bundle)
   {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_info)
-    //regDB = RegDB(getApplicationContext)
+    regDB = RegDB(getApplicationContext)
+
+    regDB.mkPerson()
   }
 
   /*

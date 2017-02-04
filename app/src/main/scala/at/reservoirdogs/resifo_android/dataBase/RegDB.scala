@@ -1,8 +1,11 @@
 package at.reservoirdogs.resifo_android.dataBase
 
-import android.content.{ContentValues, Context, CursorLoader}
+import java.io.{BufferedReader, FileInputStream, InputStream, InputStreamReader}
+
+import android.content.{ContentValues, Context, ContextWrapper, CursorLoader}
 import android.database.Cursor
 import android.database.sqlite.{SQLiteDatabase, SQLiteOpenHelper}
+import at.reservoirdogs.resifo_android.R
 
 import scala.collection.mutable.ListBuffer
 import scala.io.Source
@@ -16,20 +19,52 @@ object RegDB { val Name = "registrationDB" }
   */
 case class RegDB(context: Context) extends SQLiteOpenHelper(context, RegDB.Name, null, 1) {
 
+
   override def onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int): Unit = ()
 
   override def onCreate(db: SQLiteDatabase): Unit =
   {
 
-    //TODO CREATE TABLES for RegDB
-    //Source.fromFile("./sqlStatements/createPersonTable.sql").getLines().foreach(db.execSQL(_))
-    //Source.fromFile("./sqlStatements/createResidenceTable.sql").getLines().foreach(db.execSQL(_))
+    try {
+      val res = context.getResources
+      val insertsStream = res.openRawResource(R.raw.createdb);
+      val insertReader = new BufferedReader(new InputStreamReader(insertsStream))
+      Console.println("Starting Create Table Statements")
+      // Iterate through lines (assuming each insert has its own line and theres no other stuff)
+      while (insertReader.ready()) {
+        val insertStmt = insertReader.readLine(): String
+        db.execSQL(insertStmt)
+      }
+      insertReader.close()
+      Console.println("Finished Create Table Statements")
+    }
+    catch{
+      case sqle: android.database.sqlite.SQLiteException => Console.println("SQL EXCEPTION: "+ sqle.toString)
+      case e: Exception => Console.println("exception caught: " + e.toString);
+    }
+
 
 
     // perform initial setup
-    val personDao = SqlitePersonDao(db)
-    personDao.init()
+    //val personDao = SqlitePersonDao(db)
+    //personDao.init()
+
     //for (i <- 1 to 100) personDao.insert(Person.mkRandom)
+  }
+
+  def mkPerson() = {
+    val database = getWritableDatabase
+    try {
+      database.execSQL("INSERT INTO RESIDENCE (street,house,stair,door,plz,city,state) VALUES " +
+        "('Strasse 1',1,1,1,8010,'Graz','Austria');");
+      database.execSQL("INSERT INTO PERSON(firstname,lastname,akaGrade,birthdate,gender,religion,birthplace,maritalstatus,nationality,residence ,zmr ,docType ,docDate,docNumber,docState) VALUES" +
+        "('FELIX','RAUCHENWALD','',1990-01-01,'m','christian','graz','ledig','Austria',1,0.0,'Reisepass',123,'state');")
+      Console.println(database.execSQL("SELECT * FROM PERSON;"))
+      Console.println("test test test")
+    }
+    catch{
+      case e: Exception => Console.println("exception caught: " + e.toString);
+    }
   }
 
   def mkPersonDao(): SqlitePersonDao = SqlitePersonDao(getWritableDatabase)
