@@ -2,6 +2,7 @@ package at.reservoirdogs.resifo_android.dataBase
 
 import java.io.{BufferedReader, FileInputStream, InputStream, InputStreamReader}
 
+import android.R
 import android.content.{ContentValues, Context, ContextWrapper, CursorLoader}
 import android.database.Cursor
 import android.database.sqlite.{SQLiteDatabase, SQLiteOpenHelper}
@@ -24,10 +25,15 @@ case class RegDB(context: Context) extends SQLiteOpenHelper(context, RegDB.Name,
 
   override def onCreate(db: SQLiteDatabase): Unit =
   {
-
+    /*
     try {
       val res = context.getResources
-      val insertsStream = res.openRawResource(R.raw.createdb);
+
+
+
+      val ins: InputStream = context.getResources.openRawResource(R.raw.createdb)
+
+      val insertsStream = res.openRawResource(R.raw.createdb)
       val insertReader = new BufferedReader(new InputStreamReader(insertsStream))
       Console.println("Starting Create Table Statements")
       // Iterate through lines (assuming each insert has its own line and theres no other stuff)
@@ -42,6 +48,7 @@ case class RegDB(context: Context) extends SQLiteOpenHelper(context, RegDB.Name,
       case sqle: android.database.sqlite.SQLiteException => Console.println("SQL EXCEPTION: "+ sqle.toString)
       case e: Exception => Console.println("exception caught: " + e.toString);
     }
+    */
 
 
 

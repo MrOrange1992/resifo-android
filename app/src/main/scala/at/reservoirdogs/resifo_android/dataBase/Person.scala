@@ -75,4 +75,31 @@ class Person(val iFirstName:String, val iLastName:String) extends Serializable
   def setImmigrantCountry(sImmigrantCountry:String) = { this.immigrationCountry = sImmigrantCountry }
   //------------------------------------------------------------------------------------------------
 
+
+
+  //METHODS
+  //------------------------------------------------------------------------------------------------
+  def fillData(degree: String, birthDate: Date, gender: String, religion: String,
+               birthPlace: String, maritalStatus: String, nationality: String,
+               residences: util.ArrayList[Residence], zmr: String, docType: String, docNumber: String,
+               docDate: String, docNation: String, immigrant: Boolean, immigrantCountry: String): Unit = {
+    this.setDegree(degree)
+    this.setBirthDate(birthDate)
+    this.setGender(gender)
+    this.setReligion(religion)
+    this.setBirthPlace(birthPlace)
+    this.setMaritalStatus(maritalStatus)
+    this.setNationality(nationality)
+    //for (resi <- residences) { this.residences.add(resi) }
+    this.setZMR(zmr)
+    this.setDocType(docType)
+    this.setDocNumber(docNumber)
+    this.setDocDate(docDate)
+    this.setImmigrant(immigrant)
+    this.setImmigrantCountry(immigrantCountry)
+  }
+  //------------------------------------------------------------------------------------------------
+
+
+
 }
