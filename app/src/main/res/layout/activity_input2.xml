@@ -194,14 +194,12 @@
                 android:lines="2"
                 android:text="Ausstellungsdatum:"
                 android:textAlignment="center" />
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="date"
-                android:ems="10"
-                android:id="@+id/editTextAusstellDate"
-                android:layout_weight="1" />
+            <DatePicker
+                android:layout_width="match_parent"
+                android:layout_height="94dp"
+                android:id="@+id/datePickerIssueDate"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner" />
 
 
         </LinearLayout>
