@@ -1,4 +1,0 @@
-DROP TABLE person IF EXISTS;
-DROP TABLE residence IF EXISTS;
-CREATE TABLE residence(id INT PRIMARY KEY NOT NULL AUTOINCREMENT,street TEXT NOT NULL,house INT NOT NULL,stair INT NOT NULL,door INT NOT NULL,plz INT NOT NULL,city TEXT NOT NULL,state TEXT NOT NULL);
-CREATE TABLE person(id INT PRIMARY KEY AUTOINCREMENT, firstname TEXT NOT NULL, lastname TEXT NOT NULL,akaGrade TEXT,birthdate DATE NOT NULL,gender TEXT NOT NULL,religion TEXT,birthplace TEXT NOT NULL,maritalstatus TEXT NOT NULL,nationality TEXT NOT NULL,residence INT CONSTRAINT fk_residence REFERENCES residence (id) NOT NULL,zmr DECIMAL (0),docType TEXT,docDate DATE,docNumber INT,docState TEXT);
