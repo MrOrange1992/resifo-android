@@ -1,6 +1,8 @@
 Person;Date;Hours;Description
 mwolf;14.12.2016;1.0h;Created project, created required .txt and .md files, Created Layout for Welcome Page (mainactivity)
 mwolf;16.12.2016;0.5h;Repository changed from android-resifo to resifo-android, Member roles discussed, added Teammembers as collaborators
+pgoeschl;16.12.2016;0.5h;Repository changed from android-resifo to resifo-android, Member roles discussed, added Teammembers as collaborators
+efellner;16.12.2016;0.5h;Repository changed from android-resifo to resifo-android, Member roles discussed, added Teammembers as collaborators
 mwolf;21.12.2016;2.0h; Paperprototype
 pgoeschl;21.12.2016;2.0h;Paperprototype
 mgrainer;21.12.2016;2.0h;Paperprototype
@@ -25,4 +27,4 @@ frauchenwald;03.02.2017;3.0h;ListView, Custom Adapter
 efellner;04.02.2017;4.0h;Finishing layout, trying to get current location
 frauchenwald;04.02.2017;3.5h;Class functionality for temp caching of person object
 pgoeschl;04.02.2017;4.0h;Toast, implementing date picker, class to manage the signature
-
+mwolf;04.02.2017;3.5h;Person and Residence classes, regdb implementation

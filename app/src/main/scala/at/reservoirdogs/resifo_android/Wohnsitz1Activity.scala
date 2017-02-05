@@ -5,7 +5,7 @@ import android.location.{Location, LocationListener, LocationManager}
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
-import android.widget.{Button, RadioButton, TextView}
+import android.widget.{Button, RadioButton, TextView, Toast}
 
 /**
   * Created by felix on 01/02/2017.
@@ -20,7 +20,6 @@ class Wohnsitz1Activity extends AppCompatActivity
   }
 
 
-
   def continueTo(view: View): Unit =
   {
     if(findViewById(R.id.radioButtonMainResidenceYes).asInstanceOf[RadioButton].isChecked)
@@ -28,21 +27,35 @@ class Wohnsitz1Activity extends AppCompatActivity
     else startActivity(new Intent(this, classOf[Wohnsitz2Activity]))
   }
 
-  /*def getAddress: Unit = {
+  def getAddress(view: View): Unit = {
+    val myLocation: GpsLocation = new GpsLocation(this);
+    Toast.makeText(getApplicationContext(),myLocation.getLocation(),5000).show();
 
-    val b = findViewById(R.id.btnCurrentLocation).asInstanceOf[Button];
-    val locationManager = getSystemService(LOCATION_SERVICE).asInstanceOf[LocationManager];
+    /*val b = findViewById(R.id.btnCurrentLocation).asInstanceOf[Button];
+    //val locationManager = getSystemService(LOCATION_SERVICE).asInstanceOf[LocationManager];
 
     val listener = new LocationListener {
 
-      override def onProviderEnabled(provider: String): Unit = ???
+      override def onProviderEnabled(s : String): Unit = {
+      }
 
-      override def onStatusChanged(provider: String, status: Int, extras: Bundle): Unit = ???
+      override def onStatusChanged(provider: String, status: Int, extras: Bundle): Unit = {
 
-      override def onLocationChanged(location: Location): Unit = ???
+      }
 
-      override def onProviderDisabled(provider: String): Unit = ???
+      override def onLocationChanged(location: Location): Unit = {
+      location.getLatitude();
+      location.getLongitude();
+
+      val myLocation  = "Latitude = " + location.getLatitude() + " Longitude = " + location.getLongitude();
+
+        Toast.makeText(getApplicationContext(),myLocation,5000).show();
     }
 
-  }*/
+      override def onProviderDisabled(provider: String): Unit = {
+
+      }
+    }*/
+
+  }
 }
