@@ -37,10 +37,10 @@
                     android:id="@+id/txtViewFamilyName"
                     android:maxLines="2"
                     android:lines="2"
-                    android:text="Familienname:"
+                    android:text="Familienname: "
                     android:textAlignment="center" />
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="45dp"
                     android:inputType="textPersonName"
@@ -64,12 +64,12 @@
                     android:id="@+id/txtViewFirstname"
                     android:maxLines="2"
                     android:lines="2"
-                    android:text="Vorname:"
+                    android:text="Vorname: "
                     android:textAlignment="center" />
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:inputType="textPersonName"
                     android:ems="10"
                     android:id="@+id/editFirstname"
@@ -90,12 +90,12 @@
                     android:id="@+id/txtViewAkadGrade"
                     android:maxLines="2"
                     android:lines="2"
-                    android:text="Akad. Grad:"
+                    android:text="Akad. Grad: "
                     android:textAlignment="center" />
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:inputType="textPersonName"
                     android:ems="10"
                     android:id="@+id/editTextAkadGrade"
@@ -116,10 +116,10 @@
                     android:id="@+id/txtViewBirthday"
                     android:maxLines="2"
                     android:lines="2"
-                    android:text="Geburtsdatum"
+                    android:text="Geburtsdatum: "
                     android:textAlignment="center" />
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="45dp"
                     android:inputType="date"
@@ -142,10 +142,10 @@
                     android:id="@+id/txtViewGender"
                     android:maxLines="2"
                     android:lines="2"
-                    android:text="Geschlecht"
+                    android:text="Geschlecht: "
                     android:textAlignment="center" />
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="45dp"
                     android:inputType="textPersonName"
@@ -168,10 +168,10 @@
                     android:id="@+id/txtViewReligion"
                     android:maxLines="2"
                     android:lines="2"
-                    android:text="Religionsbekenntnis:"
+                    android:text="Religionsbekenntnis: "
                     android:textAlignment="center" />
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="45dp"
                     android:inputType="textPersonName"
@@ -194,10 +194,10 @@
                     android:id="@+id/txtViewBirthPlace"
                     android:maxLines="2"
                     android:lines="2"
-                    android:text="Geburtsort:"
+                    android:text="Geburtsort: "
                     android:textAlignment="center" />
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="45dp"
                     android:inputType="textPersonName"
@@ -220,10 +220,10 @@
                     android:id="@+id/txtViewMaritalStatus"
                     android:maxLines="2"
                     android:lines="2"
-                    android:text="Familienstand"
+                    android:text="Familienstand: "
                     android:textAlignment="center" />
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="45dp"
                     android:inputType="textPersonName"
@@ -246,10 +246,10 @@
                     android:id="@+id/txtViewNationality"
                     android:maxLines="2"
                     android:lines="2"
-                    android:text="Staatsangehörigkeit:"
+                    android:text="Staatsangehörigkeit: "
                     android:textAlignment="center" />
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="45dp"
                     android:inputType="textPersonName"
@@ -275,7 +275,7 @@
                     android:text="ZRM Nummer:"
                     android:textAlignment="center" />
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="45dp"
                     android:inputType="textPersonName"
@@ -301,7 +301,7 @@
                     android:text="Reisedokument bei Fremden:"
                     android:textAlignment="center" />
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
@@ -327,7 +327,7 @@
                     android:text="Art:"
                     android:textAlignment="center" />
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="45dp"
                     android:inputType="textPersonName"
@@ -353,7 +353,7 @@
                     android:text="Nummer:"
                     android:textAlignment="center" />
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:inputType="number"
@@ -378,7 +378,7 @@
                     android:text="Ausstellungsdatum:"
                     android:textAlignment="center" />
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:inputType="date"
@@ -403,7 +403,7 @@
                     android:text="Ausstellende Behörde, Staat:"
                     android:textAlignment="center" />
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="45dp"
                     android:inputType="textPersonName"
@@ -444,7 +444,7 @@
                     android:textAlignment="center"
                     android:layout_height="35dp" />
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:inputType="textPersonName"
                     android:text=""
@@ -470,7 +470,7 @@
                     android:textAlignment="center"
                     android:layout_height="35dp" />
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:inputType="textPersonName"
                     android:text=""
@@ -496,7 +496,7 @@
                     android:textAlignment="center"
                     android:layout_height="35dp" />
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:inputType="textPersonName"
                     android:text=""
@@ -522,7 +522,7 @@
                     android:textAlignment="center"
                     android:layout_height="35dp" />
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:inputType="textPersonName"
                     android:text=""
@@ -548,7 +548,7 @@
                     android:textAlignment="center"
                     android:layout_height="35dp" />
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:inputType="textPersonName"
                     android:text=""
@@ -574,7 +574,7 @@
                     android:textAlignment="center"
                     android:layout_height="35dp" />
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:inputType="textPersonName"
                     android:text=""
@@ -600,7 +600,7 @@
                     android:textAlignment="center"
                     android:layout_height="35dp" />
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:inputType="textPersonName"
                     android:text=""
@@ -641,7 +641,7 @@
                     android:textAlignment="center"
                     android:layout_height="35dp" />
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:inputType="textPersonName"
                     android:text=""
@@ -667,7 +667,7 @@
                     android:textAlignment="center"
                     android:layout_height="35dp" />
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:inputType="textPersonName"
                     android:text=""
@@ -693,7 +693,7 @@
                     android:textAlignment="center"
                     android:layout_height="35dp" />
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:inputType="textPersonName"
                     android:text=""
@@ -719,7 +719,7 @@
                     android:textAlignment="center"
                     android:layout_height="35dp" />
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:inputType="textPersonName"
                     android:text=""
@@ -745,7 +745,7 @@
                     android:textAlignment="center"
                     android:layout_height="35dp" />
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:inputType="textPersonName"
                     android:text=""
@@ -771,7 +771,7 @@
                     android:textAlignment="center"
                     android:layout_height="35dp" />
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:inputType="textPersonName"
                     android:text=""
@@ -797,7 +797,7 @@
                     android:textAlignment="center"
                     android:layout_height="35dp" />
 
-                <EditText
+                <TextView
                     android:layout_width="wrap_content"
                     android:inputType="textPersonName"
                     android:text=""

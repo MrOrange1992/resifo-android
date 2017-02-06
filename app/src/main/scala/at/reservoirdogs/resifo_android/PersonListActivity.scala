@@ -3,11 +3,12 @@ package at.reservoirdogs.resifo_android
 import java.util
 
 import android.app.ListActivity
+import android.content.Intent
 import android.os.Bundle
 import android.provider.Contacts.People
 import android.support.v7.app.AppCompatActivity
 import android.view.View
-import android.widget.{ArrayAdapter, ListView, SimpleCursorAdapter}
+import android.widget.{AdapterView, ArrayAdapter, ListView, SimpleCursorAdapter}
 
 import scala.collection.JavaConversions._
 import at.reservoirdogs.resifo_android.dataBase.{Person, RegDB, RegistrationDB}
@@ -18,6 +19,7 @@ import at.reservoirdogs.resifo_android.dataBase.{Person, RegDB, RegistrationDB}
 class PersonListActivity extends ListActivity
 {
   var regDB: RegistrationDB = _
+
 
   override def onCreate(savedInstanceState: Bundle): Unit =
   {
@@ -32,10 +34,24 @@ class PersonListActivity extends ListActivity
     setListAdapter(customAdapter)
   }
 
-  override def onListItemClick(l: ListView, v: View, pos: Int, i: Long)
+
+  override def onListItemClick(l: ListView, view: View, pos: Int, i: Long)
   {
-    println("Pos: " + pos + " clicked")
-    val p  = l.getAdapter.getItem(pos).asInstanceOf[Person]
-    println(p)
+
+    val person = l.getAdapter.getItem(pos)
+
+    //val person: Person  = l.getAdapter.getItem(pos).asInstanceOf[Person]
+
+
+    regDB = new RegistrationDB(getApplicationContext)
+
+    //val person: Person = regDB.sqlGetPersonByLastName(person.getLastName)
+
+    val ViewIntent = new Intent(this, classOf[ViewActivity])
+    ViewIntent.putExtra("person", person.asInstanceOf[Person])
+    startActivity(ViewIntent)
+
+
+
   }
 }
