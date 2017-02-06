@@ -160,7 +160,7 @@ public class RegistrationDB extends SQLiteOpenHelper
         //cv.put("residence", person.getResidenceAt(0));
         cv.put("zmr", person.getZMR());
         cv.put("docType", person.getDocType());
-        cv.put("docDate", person.getDocDate());
+        cv.put("docDate", person.getDocDate().toString());
         cv.put("docNumber", person.getDocNumber());
         cv.put("docState", person.getDocNation());
         cv.put("akaGrade", person.getDegree());
@@ -252,15 +252,17 @@ public class RegistrationDB extends SQLiteOpenHelper
 
         //Parse string from DB to Date
         Date bDate = new Date();
+        Date dDate = new Date();
         try
         {
             //TODO CHECK IF FORMATTING is right (yyyy-dd-mm)??
             SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
             bDate = sdf.parse(birthdate);
+            dDate = sdf.parse(docDate);
         } catch (ParseException e) { e.printStackTrace(); }
 
         person.fillData(akaGrade,bDate,gender,religion,birthplace,maritalStatus,nationality,
-                new ArrayList<Residence>(),zmr,docType,docDate,docNumber,docState,immigrant,immigrantCountry);
+                new ArrayList<Residence>(),zmr,docType,docNumber,dDate,docState,immigrant,immigrantCountry);
 
         c.close(); db.close(); return person;
     }

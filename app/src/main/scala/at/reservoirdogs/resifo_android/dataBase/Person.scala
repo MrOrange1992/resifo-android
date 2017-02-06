@@ -25,7 +25,7 @@ class Person(val iFirstName:String, val iLastName:String) extends Serializable
   private var zmr: String = ""
   private var docType: String = ""
   private var docNumber: String = ""
-  private var docDate: String = ""
+  private var docDate: Date = new Date()
   private var docNation: String = ""
   //Residence can be registering or deregistering depending on Bool registering
   private var immigrant: Boolean = false
@@ -69,7 +69,7 @@ class Person(val iFirstName:String, val iLastName:String) extends Serializable
   def setZMR(sZMR:String) = { this.zmr = sZMR }
   def setDocType(sDocType:String) = { this.docType = sDocType }
   def setDocNumber(sDocNumber:String) = { this.docNumber = sDocNumber }
-  def setDocDate(sDocDate:String) = { this.docDate = sDocDate }
+  def setDocDate(sDocDate:Date) = { this.docDate = sDocDate }
   def setDocNation(sDocNation:String) = { this.docNation = sDocNation }
   def setImmigrant(sImmigrant:Boolean) = { this.immigrant = sImmigrant }
   def setImmigrantCountry(sImmigrantCountry:String) = { this.immigrationCountry = sImmigrantCountry }
@@ -82,7 +82,7 @@ class Person(val iFirstName:String, val iLastName:String) extends Serializable
   def fillData(degree: String, birthDate: Date, gender: String, religion: String,
                birthPlace: String, maritalStatus: String, nationality: String,
                residences: util.ArrayList[Residence], zmr: String, docType: String, docNumber: String,
-               docDate: String, docNation: String, immigrant: Boolean, immigrantCountry: String): Unit = {
+               docDate: Date, docNation: String, immigrant: Boolean, immigrantCountry: String): Unit = {
     this.setDegree(degree)
     this.setBirthDate(birthDate)
     this.setGender(gender)

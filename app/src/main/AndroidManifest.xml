@@ -4,7 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -24,11 +24,11 @@
         <activity android:name=".Input1Activity" />
         <activity android:name=".Input2Activity" />
         <activity android:name=".Wohnsitz1Activity" />
-        <activity android:name=".Wohnsitz2Activity" />
         <activity android:name=".Wohnsitz3Activity" />
         <activity android:name=".AnmeldeActivity" />
         <activity android:name=".ViewActivity" />
-        <activity android:name=".PersonListActivity"></activity>
+        <activity android:name=".PersonListActivity" />
+        <activity android:name=".Wohnsitz2Activity"></activity>
     </application>
 
 </manifest>

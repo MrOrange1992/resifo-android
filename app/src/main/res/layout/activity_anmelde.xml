@@ -74,7 +74,7 @@
                 android:inputType="textPersonName"
                 android:text=""
                 android:ems="10"
-                android:id="@+id/editTextStairs"
+                android:id="@+id/editTxtAccomFirstname"
                 android:layout_weight="1"
                 android:layout_height="45dp" />
 
@@ -101,7 +101,7 @@
                 android:inputType="textPersonName"
                 android:text=""
                 android:ems="10"
-                android:id="@+id/editTextDoor"
+                android:id="@+id/editTxtAccomLastname"
                 android:layout_weight="1"
                 android:layout_height="45dp" />
 
@@ -128,7 +128,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="date"
                 android:ems="10"
-                android:id="@+id/editBirthdate"
+                android:id="@+id/editTxtAcommDate"
                 android:layout_weight="1" />
 
 

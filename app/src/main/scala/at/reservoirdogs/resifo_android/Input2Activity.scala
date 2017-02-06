@@ -32,13 +32,17 @@ class Input2Activity extends AppCompatActivity
 
   def writeDataToObject(view: View, person: Person): Person =
   {
+    val birthDate: DatePicker = findViewById(R.id.datePickerIssueDate).asInstanceOf[DatePicker]
+
     //Save textfield strings to person object
     if (findViewById(R.id.radioButtonCitizenshipAustria).asInstanceOf[RadioButton].isChecked) person.setNationality("Austria")
     else person.setNationality(findViewById(R.id.editTextOtherLand).asInstanceOf[EditText].getText.toString)
     person.setZMR(findViewById(R.id.editTextZMR).asInstanceOf[EditText].getText.toString)
     person.setDocType(findViewById(R.id.editTextArt).asInstanceOf[EditText].getText.toString)
     person.setDocNumber(findViewById(R.id.editTextNumber).asInstanceOf[EditText].getText.toString)
-    person.setDocDate(findViewById(R.id.editTextAusstellDate).asInstanceOf[EditText].getText.toString)
+
+    person.setDocDate(new Date(birthDate.getYear, birthDate.getMonth, birthDate.getDayOfMonth))
+
     person.setDocNation(findViewById(R.id.editTextAusstellende).asInstanceOf[EditText].getText.toString)
 
     person

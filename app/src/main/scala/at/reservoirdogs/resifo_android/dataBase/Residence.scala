@@ -3,7 +3,7 @@ package at.reservoirdogs.resifo_android.dataBase
 /**
   * Created by felix on 01/02/2017.
   */
-class Residence(iStreet: String, iHouseNumber: Int, iStairs: Int, iDoor: Int, iPlz: Int, iCity: String, iState: String)
+class Residence(iStreet: String, iHouseNumber: Int, iStairs: Int, iDoor: Int, iPlz: Int, iCity: String, iState: String) extends Serializable
 {
   private var state:String = iState
   private var city:String = iCity

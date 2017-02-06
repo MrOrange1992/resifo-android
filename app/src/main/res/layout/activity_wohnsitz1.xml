@@ -9,14 +9,6 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="at.reservoirdogs.resifo_android.Wohnsitz1Activity">
-    <TextView
-        android:layout_width="wrap_content"
-        android:id="@+id/txtViewHeadingWohnsitz1"
-        android:maxLines="2"
-        android:lines="2"
-        android:text="Anmeldung der Unterkunft in"
-        android:textAlignment="center"
-        android:layout_height="20dp" />
 
     <LinearLayout
         android:orientation="vertical"
@@ -25,6 +17,33 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:text="Anmeldung"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioBtnAnmeldung"
+                    android:layout_weight="1"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:text="Abmeldung"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioBtnAbmeldung"
+                    android:layout_weight="1" />
+            </RadioGroup>
+        </LinearLayout>
 
         <LinearLayout
             android:orientation="horizontal"
@@ -43,12 +62,11 @@
 
             <EditText
                 android:layout_width="wrap_content"
+                android:layout_height="45dp"
                 android:inputType="textPersonName"
-                android:text=""
                 android:ems="10"
                 android:id="@+id/editTextStreet"
-                android:layout_weight="1"
-                android:layout_height="45dp" />
+                android:layout_weight="1" />
 
 
         </LinearLayout>
@@ -70,7 +88,7 @@
 
             <EditText
                 android:layout_width="wrap_content"
-                android:inputType="textPersonName"
+                android:inputType="numberSigned"
                 android:text=""
                 android:ems="10"
                 android:id="@+id/editTextHouse"
@@ -97,7 +115,7 @@
 
             <EditText
                 android:layout_width="wrap_content"
-                android:inputType="textPersonName"
+                android:inputType="numberSigned"
                 android:text=""
                 android:ems="10"
                 android:id="@+id/editTextStairs"
@@ -124,7 +142,7 @@
 
             <EditText
                 android:layout_width="wrap_content"
-                android:inputType="textPersonName"
+                android:inputType="numberSigned"
                 android:text=""
                 android:ems="10"
                 android:id="@+id/editTextDoor"
@@ -151,7 +169,7 @@
 
             <EditText
                 android:layout_width="wrap_content"
-                android:inputType="textPersonName"
+                android:inputType="numberSigned"
                 android:text=""
                 android:ems="10"
                 android:id="@+id/editTextPLZ"
@@ -220,15 +238,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:id="@+id/txtViewStateMainResidence"
-                android:maxLines="2"
-                android:lines="2"
-                android:text="Hauptwohnsitz"
-                android:textAlignment="center"
-                android:layout_height="20dp" />
-
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -236,19 +245,19 @@
                 android:id="@+id/radioGroup">
 
                 <RadioButton
-                    android:text="Ja"
+                    android:text="Hauptwohnsitz"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/radioButtonMainResidenceYes"
+                    android:id="@+id/radioBtnMainResidence"
                     android:layout_weight="1"
                     android:checked="true"
                     android:elevation="24dp" />
 
                 <RadioButton
-                    android:text="Nein"
+                    android:text="Nebenwohnsitz"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/radioButtonMainResidenceNo"
+                    android:id="@+id/radioBtnSideResidence"
                     android:layout_weight="1" />
 
             </RadioGroup>
