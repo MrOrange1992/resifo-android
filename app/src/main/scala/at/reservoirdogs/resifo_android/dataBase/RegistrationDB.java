@@ -57,7 +57,6 @@ public class RegistrationDB extends SQLiteOpenHelper
                     "birthplace TEXT NOT NULL, " +
                     "maritalstatus TEXT NOT NULL, " +
                     "nationality TEXT NOT NULL, " +
-                    "residence INT CONSTRAINT fk_residence REFERENCES residence (id) NOT NULL, " +
                     "zmr TEXT, " +
                     "docType TEXT, " +
                     "docDate TEXT, " +
@@ -70,18 +69,26 @@ public class RegistrationDB extends SQLiteOpenHelper
                     "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
                     "street TEXT NOT NULL, " +
                     "house INT NOT NULL, " +
-                    "stair INT NOT NULL, " +
-                    "door INT NOT NULL, " +
+                    "stair INT, " +
+                    "door INT, " +
                     "plz INT NOT NULL, " +
                     "city TEXT NOT NULL," +
                     "state TEXT NOT NULL " +
                     ");";
 
+            String CREATE_PERSON_RESIDENCE_TABLE = "CREATE TABLE person_residence ("+
+                    "person_id INTEGER CONSTRAINT fk_person REFERENCES person (id) NOT NULL PRIMARY KEY, "+
+                    "residence_id INTEGER CONSTRAINT fk_residence REFERENCES residence (id) NOT NULL PRIMARY KEY "+
+                    "main_residence BOOLEAN"+
+                    ");";
+
             db.execSQL("DROP TABLE IF EXISTS PERSON;");
             db.execSQL("DROP TABLE IF EXISTS RESIDENCE;");
+            db.execSQL("DROP TABLE IF EXISTS PERSON_RESIDENCE;");
             // create tables
             db.execSQL(CREATE_PERSON_TABLE);
             db.execSQL(CREATE_RESIDENCE_TABLE);
+            db.execSQL(CREATE_PERSON_RESIDENCE_TABLE);
         }
         catch (Exception e)
         {
@@ -114,25 +121,30 @@ public class RegistrationDB extends SQLiteOpenHelper
     }
 
 
-
-    /***
-     * TODO                         !!!!!!
-     * @param person
-     * @return
-     */
-    public Boolean saveResidenceToDB(Person person)
+    public Boolean saveResidenceToDB(Residence residence)
     {
-        throw new NotImplementedError("TODO");
+        SQLiteDatabase db = getWritableDatabase();
+        try
+        {
+            db.insert("residence", null, makeContentValues(residence));
+            return true;
+        }
+        catch (Exception e) { Toast.makeText(context, e.toString(), Toast.LENGTH_SHORT).show(); return false; }
+    }
+
+    public Boolean assignResidenceToPerson (Person person, Residence residence)
+    {
+        SQLiteDatabase db = getWritableDatabase();
+        try
+        {
+            db.insert("person_residence", null, makeContentValues(person,residence));
+            return true;
+        }
+        catch (Exception e) { Toast.makeText(context, e.toString(), Toast.LENGTH_SHORT).show(); return false; }
     }
 
 
 
-    /***
-     * Create content values to insert to table person
-     * TODO Residence NOT implemented
-     * @param person
-     * @return  Contentvalues
-     */
     private ContentValues makeContentValues(Person person)
     {
         ContentValues cv = new ContentValues();
@@ -153,6 +165,44 @@ public class RegistrationDB extends SQLiteOpenHelper
         cv.put("docState", person.getDocNation());
         cv.put("akaGrade", person.getDegree());
 
+        return cv;
+    }
+
+    private ContentValues makeContentValues(Residence residence)
+    {
+        ContentValues cv = new ContentValues();
+        cv.put("house", residence.getHouseNumber());
+        cv.put("stair", residence.getStairs());
+        cv.put("door", residence.getDoor());
+        cv.put("plz", residence.getPlz());
+        cv.put("city", residence.getCity());
+        cv.put("state", residence.getState());
+        return cv;
+    }
+
+    private ContentValues makeContentValues(Person person, Residence residence)
+    {
+        String persId = "";
+        String resId = "";
+        String selectPerson = String.format("SELECT id FROM person WHERE lastname = '%s' AND firstname = '%s';", person.getLastName(),person.getFirstName());
+        String selectResidence = String.format("SELECT id FROM residence WHERE street = '%s' AND city = '%s' AND house = '%d;", residence.getStreet(),residence.getCity(),residence.getHouseNumber());
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = db.rawQuery(selectPerson, null);
+        if (c.moveToFirst()) {
+            do {
+                persId = c.getString(0);
+            } while (c.moveToNext());
+        };
+        Cursor c2 = db.rawQuery(selectResidence, null);
+        if (c.moveToFirst()) {
+            do {
+                resId = c.getString(0);
+            } while (c.moveToNext());
+        };
+        ContentValues cv = new ContentValues();
+        cv.put("person_id", persId);
+        cv.put("residence_id", resId);
+        cv.put("main_residence", residence.getMainResidence());
         return cv;
     }
 
