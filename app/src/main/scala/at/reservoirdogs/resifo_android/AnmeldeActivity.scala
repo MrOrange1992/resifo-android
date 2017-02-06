@@ -31,8 +31,7 @@ class AnmeldeActivity extends AppCompatActivity
     if (person.getResidenceAt(0).getActive)
     {
       List( findViewById(R.id.editTxtAccomFirstname).asInstanceOf[EditText].getText.toString,
-        findViewById(R.id.editTxtAccomLastname).asInstanceOf[EditText].getText.toString,
-        findViewById(R.id.editTxtAcommDate).asInstanceOf[EditText].getText.toString).foreach (
+        findViewById(R.id.editTxtAccomLastname).asInstanceOf[EditText].getText.toString).foreach (
         element => if (element.isEmpty) checkInput = false
       )
       checkInput

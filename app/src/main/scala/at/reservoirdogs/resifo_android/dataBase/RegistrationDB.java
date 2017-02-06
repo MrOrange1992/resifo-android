@@ -127,50 +127,6 @@ public class RegistrationDB extends SQLiteOpenHelper
         SQLiteDatabase db = getWritableDatabase();
         try
         {
-            String CREATE_PERSON_TABLE = "CREATE TABLE person ( " +
-                    "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                    "firstname TEXT NOT NULL, " +
-                    "lastname TEXT NOT NULL, " +
-                    "akaGrade TEXT, " +
-                    "birthdate TEXT NOT NULL, " +
-                    "gender TEXT NOT NULL, " +
-                    "religion TEXT, " +
-                    "birthplace TEXT NOT NULL, " +
-                    "maritalstatus TEXT NOT NULL, " +
-                    "nationality TEXT NOT NULL, " +
-                    "zmr TEXT, " +
-                    "docType TEXT, " +
-                    "docDate TEXT, " +
-                    "docNumber INT, " +
-                    "docState TEXT, " +
-                    "immigrant TEXT, " +
-                    "immigrantCountry TEXT" +
-                    ")";
-            String CREATE_RESIDENCE_TABLE = "CREATE TABLE residence ( " +
-                    "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                    "street TEXT NOT NULL, " +
-                    "house INT NOT NULL, " +
-                    "stair INT, " +
-                    "door INT, " +
-                    "plz INT NOT NULL, " +
-                    "city TEXT NOT NULL," +
-                    "state TEXT NOT NULL " +
-                    ");";
-
-            String CREATE_PERSON_RESIDENCE_TABLE = "CREATE TABLE person_residence ("+
-                    "person_id INTEGER CONSTRAINT fk_person REFERENCES person (id) NOT NULL , "+
-                    "residence_id INTEGER CONSTRAINT fk_residence REFERENCES residence (id) NOT NULL , "+
-                    "main_residence BOOLEAN, "+
-                    "PRIMARY KEY (person_id, residence_id)"+
-                    "); ";
-
-            db.execSQL("DROP TABLE IF EXISTS PERSON;");
-            db.execSQL("DROP TABLE IF EXISTS RESIDENCE;");
-            db.execSQL("DROP TABLE IF EXISTS PERSON_RESIDENCE;");
-            // create tables
-            db.execSQL(CREATE_PERSON_TABLE);
-            db.execSQL(CREATE_RESIDENCE_TABLE);
-            db.execSQL(CREATE_PERSON_RESIDENCE_TABLE);
             db.insert("residence", null, makeContentValues(residence));
             return true;
         }
@@ -325,26 +281,26 @@ public class RegistrationDB extends SQLiteOpenHelper
                 do {
                     Person tempPerson = new Person(c.getString(1), c.getString(2));
                     tempPerson.setDegree(c.getString(3));
-                    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-                    tempPerson.setBirthDate(sdf.parse(c.getString(3)));
-                    tempPerson.setGender(c.getString(4));
-                    tempPerson.setReligion(c.getString(5));
-                    tempPerson.setBirthPlace(c.getString(6));
-                    tempPerson.setMaritalStatus(c.getString(7));
-                    tempPerson.setNationality(c.getString(8));
-                    tempPerson.setZMR(c.getString(9));
-                    tempPerson.setDocType(c.getString(10));
-                    tempPerson.setDocDate(sdf.parse(c.getString(11)));
-                    tempPerson.setDocNumber(c.getString(12));
-                    tempPerson.setDocNation(c.getString(13));
-                    if (c.getString(14) == "true") tempPerson.setImmigrant(true);
+                    SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+                    tempPerson.setBirthDate(new Date());
+                    tempPerson.setGender(c.getString(5));
+                    tempPerson.setReligion(c.getString(6));
+                    tempPerson.setBirthPlace(c.getString(7));
+                    tempPerson.setMaritalStatus(c.getString(8));
+                    tempPerson.setNationality(c.getString(9));
+                    tempPerson.setZMR(c.getString(10));
+                    tempPerson.setDocType(c.getString(11));
+                    tempPerson.setDocDate(new Date());
+                    tempPerson.setDocNumber(c.getString(13));
+                    tempPerson.setDocNation(c.getString(14));
+                    if (c.getString(15) == "true") tempPerson.setImmigrant(true);
                     else tempPerson.setImmigrant(false);
-                    tempPerson.setImmigrantCountry(c.getString(15));
+                    tempPerson.setImmigrantCountry(c.getString(16));
                     personList.add(tempPerson);
 
                 } while (c.moveToNext());
             }
-        } catch (ParseException e) { e.printStackTrace(); }
+        } catch (/*Parse*/Exception e) { e.printStackTrace(); }
 
 
     c.close(); db.close(); return personList;
