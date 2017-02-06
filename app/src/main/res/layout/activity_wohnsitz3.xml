@@ -22,7 +22,7 @@
             android:maxLines="2"
             android:lines="2"
             android:text="Abmeldung der Unterkunft in"
-            android:textAlignment="center"
+            android:textAlignment="inherit"
             android:layout_height="20dp" />
         <LinearLayout
             android:orientation="horizontal"
@@ -241,14 +241,17 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/radioButtonEmigrationUnsubscribeYes"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:onClick="enableEmigrationField" />
 
                     <RadioButton
                         android:text="Nein"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/radioButtonEmigrationUnsubscribeNo"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:onClick="disableEmigrationField"
+                        android:checked="true" />
                 </LinearLayout>
             </RadioGroup>
 
@@ -258,7 +261,9 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="0dp">
+            android:layout_marginTop="0dp"
+            android:id="@+id/EmigrationField"
+            android:visibility="gone">
 
             <TextView
                 android:layout_width="wrap_content"
