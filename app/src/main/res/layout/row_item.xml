@@ -14,9 +14,10 @@
             android:text="Nachname:"
             android:layout_height="wrap_content"
             android:id="@+id/textView4"
-            android:textStyle="normal|italic"
+            android:textStyle="normal|bold"
             android:textSize="18sp"
-            android:layout_width="120dp" />
+            android:layout_width="120dp"
+            android:textAllCaps="false" />
 
         <TextView
             android:text="Lastname"
@@ -37,7 +38,7 @@
             android:text="Vorname:"
             android:layout_height="wrap_content"
             android:id="@+id/textView3"
-            android:textStyle="normal|italic"
+            android:textStyle="normal|bold"
             android:textSize="18sp"
             android:layout_width="120dp" />
 

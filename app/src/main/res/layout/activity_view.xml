@@ -38,13 +38,13 @@
                     android:maxLines="2"
                     android:lines="2"
                     android:text="Familienname: "
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textStyle="normal|bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="45dp"
                     android:inputType="textPersonName"
-                    android:text=""
                     android:ems="10"
                     android:id="@+id/editTextFamilyName"
                     android:layout_weight="1" />
@@ -64,6 +64,7 @@
                     android:id="@+id/txtViewFirstname"
                     android:maxLines="2"
                     android:lines="2"
+                    android:textStyle="normal|bold"
                     android:text="Vorname: "
                     android:textAlignment="center" />
 
@@ -73,8 +74,7 @@
                     android:inputType="textPersonName"
                     android:ems="10"
                     android:id="@+id/editFirstname"
-                    android:layout_weight="1"
-                    android:textSize="18sp" />
+                    android:layout_weight="1" />
 
             </LinearLayout>
 
@@ -90,6 +90,7 @@
                     android:id="@+id/txtViewAkadGrade"
                     android:maxLines="2"
                     android:lines="2"
+                    android:textStyle="normal|bold"
                     android:text="Akad. Grad: "
                     android:textAlignment="center" />
 
@@ -115,6 +116,7 @@
                     android:layout_height="45dp"
                     android:id="@+id/txtViewBirthday"
                     android:maxLines="2"
+                    android:textStyle="normal|bold"
                     android:lines="2"
                     android:text="Geburtsdatum: "
                     android:textAlignment="center" />
@@ -141,6 +143,7 @@
                     android:layout_height="45dp"
                     android:id="@+id/txtViewGender"
                     android:maxLines="2"
+                    android:textStyle="normal|bold"
                     android:lines="2"
                     android:text="Geschlecht: "
                     android:textAlignment="center" />
@@ -167,6 +170,7 @@
                     android:layout_height="45dp"
                     android:id="@+id/txtViewReligion"
                     android:maxLines="2"
+                    android:textStyle="normal|bold"
                     android:lines="2"
                     android:text="Religionsbekenntnis: "
                     android:textAlignment="center" />
@@ -193,6 +197,7 @@
                     android:layout_height="45dp"
                     android:id="@+id/txtViewBirthPlace"
                     android:maxLines="2"
+                    android:textStyle="normal|bold"
                     android:lines="2"
                     android:text="Geburtsort: "
                     android:textAlignment="center" />
@@ -219,6 +224,7 @@
                     android:layout_height="45dp"
                     android:id="@+id/txtViewMaritalStatus"
                     android:maxLines="2"
+                    android:textStyle="normal|bold"
                     android:lines="2"
                     android:text="Familienstand: "
                     android:textAlignment="center" />
@@ -245,6 +251,7 @@
                     android:layout_height="45dp"
                     android:id="@+id/txtViewNationality"
                     android:maxLines="2"
+                    android:textStyle="normal|bold"
                     android:lines="2"
                     android:text="Staatsangehörigkeit: "
                     android:textAlignment="center" />
@@ -271,6 +278,7 @@
                     android:layout_height="45dp"
                     android:id="@+id/txtViewZRMNumber"
                     android:maxLines="2"
+                    android:textStyle="normal|bold"
                     android:lines="2"
                     android:text="ZRM Nummer:"
                     android:textAlignment="center" />
@@ -297,6 +305,7 @@
                     android:layout_height="20dp"
                     android:id="@+id/txtViewDocument"
                     android:maxLines="2"
+                    android:textStyle="normal|bold"
                     android:lines="2"
                     android:text="Reisedokument bei Fremden:"
                     android:textAlignment="center" />
@@ -323,6 +332,7 @@
                     android:layout_height="45dp"
                     android:id="@+id/txtViewArt"
                     android:maxLines="2"
+                    android:textStyle="normal|bold"
                     android:lines="2"
                     android:text="Art:"
                     android:textAlignment="center" />
@@ -349,6 +359,7 @@
                     android:layout_height="45dp"
                     android:id="@+id/txtViewNumber"
                     android:maxLines="2"
+                    android:textStyle="normal|bold"
                     android:lines="2"
                     android:text="Nummer:"
                     android:textAlignment="center" />
@@ -374,6 +385,7 @@
                     android:layout_height="45dp"
                     android:id="@+id/txtViewAusstellDate"
                     android:maxLines="2"
+                    android:textStyle="normal|bold"
                     android:lines="2"
                     android:text="Ausstellungsdatum:"
                     android:textAlignment="center" />
@@ -400,6 +412,7 @@
                     android:id="@+id/txtViewAusstellende"
                     android:maxLines="2"
                     android:lines="2"
+                    android:textStyle="normal|bold"
                     android:text="Ausstellende Behörde, Staat:"
                     android:textAlignment="center" />
 
@@ -426,6 +439,7 @@
                     android:id="@+id/textViewHauptwohnsitz"
                     android:layout_weight="1"
                     android:textSize="16sp"
+                    android:textStyle="normal|bold"
                     android:paddingTop="30dp" />
             </LinearLayout>
 
@@ -440,6 +454,7 @@
                     android:id="@+id/txtViewStreet"
                     android:maxLines="2"
                     android:lines="2"
+                    android:textStyle="normal|bold"
                     android:text="Straße"
                     android:textAlignment="center"
                     android:layout_height="35dp" />
@@ -466,6 +481,7 @@
                     android:id="@+id/txtViewHouse"
                     android:maxLines="2"
                     android:lines="2"
+                    android:textStyle="normal|bold"
                     android:text="Hausnummer:"
                     android:textAlignment="center"
                     android:layout_height="35dp" />
@@ -492,6 +508,7 @@
                     android:id="@+id/txtViewStairs"
                     android:maxLines="2"
                     android:lines="2"
+                    android:textStyle="normal|bold"
                     android:text="Stiege:"
                     android:textAlignment="center"
                     android:layout_height="35dp" />
@@ -517,6 +534,7 @@
                     android:layout_width="wrap_content"
                     android:id="@+id/txtViewDoor"
                     android:maxLines="2"
+                    android:textStyle="normal|bold"
                     android:lines="2"
                     android:text="Tür:"
                     android:textAlignment="center"
@@ -545,6 +563,7 @@
                     android:maxLines="2"
                     android:lines="2"
                     android:text="PLZ:"
+                    android:textStyle="normal|bold"
                     android:textAlignment="center"
                     android:layout_height="35dp" />
 
@@ -571,6 +590,7 @@
                     android:maxLines="2"
                     android:lines="2"
                     android:text="Ort:"
+                    android:textStyle="normal|bold"
                     android:textAlignment="center"
                     android:layout_height="35dp" />
 
@@ -596,6 +616,7 @@
                     android:id="@+id/txtViewState"
                     android:maxLines="2"
                     android:lines="2"
+                    android:textStyle="normal|bold"
                     android:text="Bundesland:"
                     android:textAlignment="center"
                     android:layout_height="35dp" />
@@ -619,6 +640,7 @@
                 <TextView
                     android:text="Nebenwohnsitz"
                     android:layout_width="wrap_content"
+                    android:textStyle="normal|bold"
                     android:layout_height="wrap_content"
                     android:id="@+id/textViewNebenwohnsitz"
                     android:layout_weight="1"
@@ -638,6 +660,7 @@
                     android:maxLines="2"
                     android:lines="2"
                     android:text="Straße"
+                    android:textStyle="normal|bold"
                     android:textAlignment="center"
                     android:layout_height="35dp" />
 
@@ -662,6 +685,7 @@
                     android:layout_width="wrap_content"
                     android:id="@+id/txtViewHouseNebenwohnsitz"
                     android:maxLines="2"
+                    android:textStyle="normal|bold"
                     android:lines="2"
                     android:text="Hausnummer:"
                     android:textAlignment="center"
@@ -689,6 +713,7 @@
                     android:id="@+id/txtViewStairsNebenwohnsitz"
                     android:maxLines="2"
                     android:lines="2"
+                    android:textStyle="normal|bold"
                     android:text="Stiege:"
                     android:textAlignment="center"
                     android:layout_height="35dp" />
@@ -714,6 +739,7 @@
                     android:layout_width="wrap_content"
                     android:id="@+id/txtViewDoorNebenwohnsitz"
                     android:maxLines="2"
+                    android:textStyle="normal|bold"
                     android:lines="2"
                     android:text="Tür:"
                     android:textAlignment="center"
@@ -740,6 +766,7 @@
                     android:layout_width="wrap_content"
                     android:id="@+id/txtViewPLZNebenwohnsitz"
                     android:maxLines="2"
+                    android:textStyle="normal|bold"
                     android:lines="2"
                     android:text="PLZ:"
                     android:textAlignment="center"
@@ -769,6 +796,7 @@
                     android:lines="2"
                     android:text="Ort:"
                     android:textAlignment="center"
+                    android:textStyle="normal|bold"
                     android:layout_height="35dp" />
 
                 <TextView
@@ -792,6 +820,7 @@
                     android:layout_width="wrap_content"
                     android:id="@+id/txtViewStateNebenwohnsitz"
                     android:maxLines="2"
+                    android:textStyle="normal|bold"
                     android:lines="2"
                     android:text="Bundesland:"
                     android:textAlignment="center"
@@ -820,7 +849,7 @@
                     android:layout_weight="2"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:layout_marginRight="300dp"
+                    android:layout_marginRight="10dp"
                     android:paddingLeft="10dp" />
 
                 <Button
