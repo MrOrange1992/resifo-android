@@ -41,7 +41,7 @@ class InfoActivity extends AppCompatActivity with Serializable
 
       startActivity(InputIntent)
     }
-    else Toast.makeText(getApplicationContext, "Please enter first and lastname", 5000).show()
+    else Toast.makeText(getApplicationContext, "Bitte geben Sie Vor- und Nachname an!", 5000).show()
   }
 
 }
