@@ -53,7 +53,7 @@ class AnmeldeActivity extends AppCompatActivity
         startActivity(new Intent(this, classOf[MainActivity]))
         Toast.makeText(getApplicationContext,"Speichern erfolgreich",5000).show()
       }
-      else Toast.makeText(getApplicationContext,"Bitte Felder ausfüllen!",5000).show()
+      else Toast.makeText(getApplicationContext,"Bitte füllen Sie alle erforderlichen Felder aus!!",5000).show()
     }
     else
     {

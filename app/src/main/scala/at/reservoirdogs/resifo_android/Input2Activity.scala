@@ -59,7 +59,7 @@ class Input2Activity extends AppCompatActivity
 
       startActivity(Wohnsitz1Intent)
     }
-    else Toast.makeText(getApplicationContext, "Please enter other country", 5000).show()
+    else Toast.makeText(getApplicationContext, "Bitte geben Sie ein anderes Land ein!", 5000).show()
   }
 
   def enableResidenceField(view: View): Unit =
