@@ -1,5 +1,7 @@
 package at.reservoirdogs.resifo_android
 
+import java.util
+
 import android.app.ListActivity
 import android.os.Bundle
 import android.provider.Contacts.People
@@ -8,29 +10,22 @@ import android.view.View
 import android.widget.{ArrayAdapter, ListView, SimpleCursorAdapter}
 
 import scala.collection.JavaConversions._
-import at.reservoirdogs.resifo_android.dataBase.{Person, RegDB}
+import at.reservoirdogs.resifo_android.dataBase.{Person, RegDB, RegistrationDB}
 
 /**
   * Created by felix on 03/02/2017.
   */
 class PersonListActivity extends ListActivity
 {
-  var regDB: RegDB = _
+  var regDB: RegistrationDB = _
 
   override def onCreate(savedInstanceState: Bundle): Unit =
   {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_person_list)
-    regDB = RegDB(getApplicationContext)
+    regDB = new RegistrationDB(getApplicationContext)
 
-
-    //TODO Get List of all persons currently in regDB
-    //val persons: List[Person] = regDB.mkPersonDao().findByFirstName("ggg")
-
-    //Test Case
-    val personList: List[Person] = List(new Person("Flex", "Boy"))
-
-    //val ps : List[Person] = List(Person("aaa","b"))
+    val personList: util.ArrayList[Person] = regDB.sqlGetAllPersons()
 
     //Custom adapter implemented in JAVA
     val customAdapter = new CustomAdapter(this, personList)

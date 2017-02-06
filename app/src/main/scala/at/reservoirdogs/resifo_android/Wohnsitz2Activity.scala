@@ -26,8 +26,6 @@ class Wohnsitz2Activity extends AppCompatActivity
 
     List( findViewById(R.id.editTextStreet).asInstanceOf[EditText].getText.toString,
       findViewById(R.id.editTextHouse).asInstanceOf[EditText].getText.toString,
-      findViewById(R.id.editTextStairs).asInstanceOf[EditText].getText.toString,
-      findViewById(R.id.editTextDoor).asInstanceOf[EditText].getText.toString,
       findViewById(R.id.editTextPLZ).asInstanceOf[EditText].getText.toString,
       findViewById(R.id.editTextVillage).asInstanceOf[EditText].getText.toString,
       findViewById(R.id.editTextState).asInstanceOf[EditText].getText.toString).foreach (
@@ -82,21 +80,6 @@ class Wohnsitz2Activity extends AppCompatActivity
     else Toast.makeText(getApplicationContext, "Bitte alle Felder ausfüllen!", 5000).show()
   }
 
-
-
-  def enableStateField(view: View): Unit =
-  {
-    findViewById(R.id.editTextStateEmigrated).setEnabled(true)
-    findViewById(R.id.editTextStateEmigrated).setVisibility(View.VISIBLE)
-  }
-
-  def disableStateField(view: View): Unit =
-  {
-    findViewById(R.id.editTextStateEmigrated).setEnabled(false)
-    findViewById(R.id.editTextStateEmigrated).setVisibility(View.GONE)
-  }
-
-
   def getAddress(view: View): Unit = {
     val myLocation: GpsLocation = new GpsLocation(this)
     val addressfields = myLocation.getAddress()
@@ -108,4 +91,7 @@ class Wohnsitz2Activity extends AppCompatActivity
     Toast.makeText(getApplicationContext(),output,5000).show()
 
   }
+
+
+
 }
