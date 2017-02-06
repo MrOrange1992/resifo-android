@@ -1,9 +1,9 @@
 ## Registrationform
-<img src="docs/logo.jpg" width="48">)
+<img src="docs/logo.jpg" width="100">
 With the app, you have the possibility to register or check out your residence. This happens through a SQLite database. It is also possible to see a list of all registered residences and furthermore to edit or delete data from the database. It is possible to have two residences, a main and a beside residence. The user just has to go through the wizard and fill in all necessary input fields. If data is missing the programme prints a toast which asks the user to enter all the data.
-![Image2](docs/welcomescreen.png)
+<img src="docs/welcomescreenpng" width="200">
 When you enter data, you can choose to automatically fill in the address of your current location via GPS and geocoder. Therefore, you have to add uses permissions in the android manifest.
-![Image3](docs/uses-permissions.PNG)
+<img src="docs/uses-permissions.PNG" width="400">
 
 ## Prerequisites
 - GPS must be activated
