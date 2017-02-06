@@ -33,11 +33,12 @@ public class GpsLocation implements LocationListener {
     List<Address> addresses;
 
     public GpsLocation(AppCompatActivity callingActivity) {
+
         if (ActivityCompat.checkSelfPermission(callingActivity, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(callingActivity, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(callingActivity, new String[] {
                             Manifest.permission.ACCESS_FINE_LOCATION,
                             Manifest.permission.ACCESS_COARSE_LOCATION,
-                            Manifest.permission.INTERNET},0);
+                            Manifest.permission.INTERNET},1);
 
         }
 
@@ -57,13 +58,6 @@ public class GpsLocation implements LocationListener {
         } catch (IOException e) {
             Console.println(e.toString());
         }
-        String address = addresses.get(0).getAddressLine(0); // If any additional address line present than only, check with max available address lines by getMaxAddressLineIndex()
-        String city = addresses.get(0).getLocality();
-        String state = addresses.get(0).getAdminArea();
-        String country = addresses.get(0).getCountryName();
-        String postalCode = addresses.get(0).getPostalCode();
-        String knownName = addresses.get(0).getFeatureName(); // Only if available else return NULL
-
         String[] output = {addresses.get(0).getAddressLine(0),addresses.get(0).getLocality(),addresses.get(0).getPostalCode()};
         return output;
     }
