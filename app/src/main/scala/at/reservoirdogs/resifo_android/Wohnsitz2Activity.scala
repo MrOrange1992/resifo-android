@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.provider.Telephony.Mms.Intents
 import android.support.v7.app.AppCompatActivity
 import android.view.View
-import android.widget.{EditText, RadioButton, Toast}
+import android.widget.{EditText, RadioButton, Spinner, Toast}
 import at.reservoirdogs.resifo_android.dataBase.{Person, Residence}
 
 /**
@@ -28,7 +28,7 @@ class Wohnsitz2Activity extends AppCompatActivity
       findViewById(R.id.editTextHouse).asInstanceOf[EditText].getText.toString,
       findViewById(R.id.editTextPLZ).asInstanceOf[EditText].getText.toString,
       findViewById(R.id.editTextVillage).asInstanceOf[EditText].getText.toString,
-      findViewById(R.id.editTextState).asInstanceOf[EditText].getText.toString).foreach (
+      findViewById(R.id.spinnerState).asInstanceOf[Spinner].getSelectedItem.toString).foreach (
       element => if (element.isEmpty) checkInput = false
     )
 
@@ -63,7 +63,7 @@ class Wohnsitz2Activity extends AppCompatActivity
     catch{ case e: Exception =>  }
 
     residence.setCity(findViewById(R.id.editTextVillage).asInstanceOf[EditText].getText.toString)
-    residence.setState(findViewById(R.id.editTextState).asInstanceOf[EditText].getText.toString)
+    residence.setState(findViewById(R.id.spinnerState).asInstanceOf[Spinner].getSelectedItem.toString)
 
     person.addResidence(residence)
     person

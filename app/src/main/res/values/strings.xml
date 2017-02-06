@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Meldezettel App</string>
+    <string-array name="spinnerItems">
+        <item>Steiermark</item>
+        <item>Tirol</item>
+        <item>Vorarlberg</item>
+        <item>Niederösterreich</item>
+        <item>Oberösterreich</item>
+        <item>Wien</item>
+        <item>Kärnten</item>
+        <item>Salzburg</item>
+        <item>Burgenland</item>
+    </string-array>
 </resources>

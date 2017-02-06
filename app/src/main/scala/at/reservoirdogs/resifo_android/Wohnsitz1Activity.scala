@@ -29,7 +29,7 @@ class Wohnsitz1Activity extends AppCompatActivity
           findViewById(R.id.editTextHouse).asInstanceOf[EditText].getText.toString,
       findViewById(R.id.editTextPLZ).asInstanceOf[EditText].getText.toString,
       findViewById(R.id.editTextVillage).asInstanceOf[EditText].getText.toString,
-      findViewById(R.id.editTextState).asInstanceOf[EditText].getText.toString).foreach (
+      findViewById(R.id.spinnerState).asInstanceOf[Spinner].getSelectedItem.toString).foreach (
       element => if (element.isEmpty) checkInput = false
     )
 
@@ -62,7 +62,7 @@ class Wohnsitz1Activity extends AppCompatActivity
     catch{ case e: Exception =>  }
 
     residence.setCity(findViewById(R.id.editTextVillage).asInstanceOf[EditText].getText.toString)
-    residence.setState(findViewById(R.id.editTextState).asInstanceOf[EditText].getText.toString)
+    residence.setState(findViewById(R.id.spinnerState).asInstanceOf[Spinner].getSelectedItem.toString)
 
     person.addResidence(residence)
     person
