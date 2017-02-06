@@ -4,6 +4,7 @@
 With the app, you have the possibility to register or check out your residence. This happens through a SQLite database. It is also possible to see a list of all registered residences and furthermore to edit or delete data from the database. It is possible to have two residences, a main and a beside residence. The user just has to go through the wizard and fill in all necessary input fields. There are 6 activities to pass, to finish the registration. It is possible to jump between nearby activities. If data is missing the programme prints a toast which asks the user to enter all the data. Activities that are not needed are automatically skipped for the best possible user experience.
 On the Welcome Screen you can choose between making a new registration or to see the list of all registrations done.
 
+
 <img src="docs/welcomescreen.png" width="250">
 <img src="docs/toast.png" width="250">
 
