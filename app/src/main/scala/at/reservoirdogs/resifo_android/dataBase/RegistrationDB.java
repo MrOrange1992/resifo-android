@@ -282,7 +282,7 @@ public class RegistrationDB extends SQLiteOpenHelper
                     Person tempPerson = new Person(c.getString(1), c.getString(2));
                     tempPerson.setDegree(c.getString(3));
                     SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
-                    tempPerson.setBirthDate(new Date());
+                    tempPerson.setBirthDate(sdf.parse(c.getString(4)));
                     tempPerson.setGender(c.getString(5));
                     tempPerson.setReligion(c.getString(6));
                     tempPerson.setBirthPlace(c.getString(7));

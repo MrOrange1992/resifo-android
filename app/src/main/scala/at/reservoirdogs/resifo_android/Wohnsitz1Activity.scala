@@ -46,18 +46,20 @@ class Wohnsitz1Activity extends AppCompatActivity
 
     residence.setStreet(findViewById(R.id.editTextStreet).asInstanceOf[EditText].getText.toString)
 
+    var stairs=""
+    var door = ""
     try
     {
       val house = findViewById(R.id.editTextHouse).asInstanceOf[EditText].getText.toString
-      val stairs = findViewById(R.id.editTextStairs).asInstanceOf[EditText].getText.toString
-      val door = findViewById(R.id.editTextDoor).asInstanceOf[EditText].getText.toString
-      val plz = findViewById(R.id.editTextPLZ).asInstanceOf[EditText].getText.toString
+      stairs = findViewById(R.id.editTextStairs).asInstanceOf[EditText].getText.toString
+      door = findViewById(R.id.editTextDoor).asInstanceOf[EditText].getText.toString
+      var plz = findViewById(R.id.editTextPLZ).asInstanceOf[EditText].getText.toString
       residence.setHouseNumber(house.toInt)
       residence.setStairs(stairs.toInt)
       residence.setDoor(door.toInt)
       residence.setPlz(plz.toInt)
     }
-    catch{ case e: Exception => Toast.makeText(getApplicationContext, "Ungültige Eingabe!", 5000).show() }
+    catch{ case e: Exception =>  }
 
     residence.setCity(findViewById(R.id.editTextVillage).asInstanceOf[EditText].getText.toString)
     residence.setState(findViewById(R.id.editTextState).asInstanceOf[EditText].getText.toString)
