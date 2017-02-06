@@ -154,7 +154,7 @@
                 android:layout_width="match_parent"
                 app:srcCompat="@android:color/transparent"
                 android:id="@+id/imageViewsignature1"
-                android:layout_height="70dp" />
+                android:layout_height="30dp" />
 
 
         </LinearLayout>
@@ -176,9 +176,9 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
                 app:srcCompat="@android:color/transparent"
-                android:id="@+id/imageViewSignature2" />
+                android:id="@+id/imageViewSignature2"
+                android:layout_height="30dp" />
 
 
         </LinearLayout>
