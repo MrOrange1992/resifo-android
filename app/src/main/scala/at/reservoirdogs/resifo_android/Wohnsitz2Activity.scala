@@ -32,7 +32,7 @@ class Wohnsitz2Activity extends AppCompatActivity
       element => if (element.isEmpty) checkInput = false
     )
 
-    if (!findViewById(R.id.radioButtonEmigrationUnsubscribeYes).asInstanceOf[RadioButton].isChecked && findViewById(R.id.editTextStateEmigrated).asInstanceOf[EditText].getText.toString.isEmpty)
+    if (findViewById(R.id.radioButtonImmigrationYes).asInstanceOf[RadioButton].isChecked && findViewById(R.id.editTextStateEmigrated).asInstanceOf[EditText].getText.toString.isEmpty)
       checkInput = false
 
     checkInput
@@ -77,7 +77,7 @@ class Wohnsitz2Activity extends AppCompatActivity
 
       val AnmeldeIntent = new Intent(this, classOf[AnmeldeActivity])
       AnmeldeIntent.putExtra("person", person)
-      startActivity(new Intent(this, classOf[AnmeldeActivity]))
+      startActivity(AnmeldeIntent)
     }
     else Toast.makeText(getApplicationContext, "Bitte alle Felder ausfüllen!", 5000).show()
   }
@@ -85,12 +85,15 @@ class Wohnsitz2Activity extends AppCompatActivity
   def getAddress(view: View): Unit = {
     val myLocation: GpsLocation = new GpsLocation(this)
     val addressfields = myLocation.getAddress()
-    var output ="Address: "
-    output = output + addressfields(0)+"\n City: "
-    output = output + addressfields(1)+"\n PLZ: "
-    output = output + addressfields(1)
 
-    Toast.makeText(getApplicationContext(),output,5000).show()
+    val housenumber = addressfields(0).split(" ")(addressfields(0).split(" ").length-1)
+    val street = addressfields(0).substring(0,addressfields(0).length() - housenumber.length())
+    val city = addressfields(1)
+    val plz = addressfields(2)
+    findViewById(R.id.editTextHouse).asInstanceOf[EditText].setText(housenumber)
+    findViewById(R.id.editTextStreet).asInstanceOf[EditText].setText(street)
+    findViewById(R.id.editTextVillage).asInstanceOf[EditText].setText(city)
+    findViewById(R.id.editTextPLZ).asInstanceOf[EditText].setText(plz);
 
   }
 
