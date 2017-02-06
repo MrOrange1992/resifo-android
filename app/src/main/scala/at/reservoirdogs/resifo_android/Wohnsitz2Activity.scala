@@ -95,4 +95,17 @@ class Wohnsitz2Activity extends AppCompatActivity
     findViewById(R.id.editTextStateEmigrated).setEnabled(false)
     findViewById(R.id.editTextStateEmigrated).setVisibility(View.GONE)
   }
+
+
+  def getAddress(view: View): Unit = {
+    val myLocation: GpsLocation = new GpsLocation(this)
+    val addressfields = myLocation.getAddress()
+    var output ="Address: "
+    output = output + addressfields(0)+"\n City: "
+    output = output + addressfields(1)+"\n PLZ: "
+    output = output + addressfields(1)
+
+    Toast.makeText(getApplicationContext(),output,5000).show()
+
+  }
 }

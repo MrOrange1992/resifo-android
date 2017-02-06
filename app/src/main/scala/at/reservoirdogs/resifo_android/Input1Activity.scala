@@ -59,7 +59,7 @@ class Input1Activity extends AppCompatActivity
 
       startActivity(Input2Intent)
     }
-    else Toast.makeText(getApplicationContext, "Please enter all neccessary information", 5000).show()
+    else Toast.makeText(getApplicationContext, "Bitte alle Felder ausfüllen!", 5000).show()
 
   }
 
