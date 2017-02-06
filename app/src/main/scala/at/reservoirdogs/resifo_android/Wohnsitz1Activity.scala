@@ -28,8 +28,14 @@ class Wohnsitz1Activity extends AppCompatActivity
   }
 
   def getAddress(view: View): Unit = {
-    val myLocation: GpsLocation = new GpsLocation(this);
-    Toast.makeText(getApplicationContext(),myLocation.getLocation(),5000).show();
+    val myLocation: GpsLocation = new GpsLocation(this)
+    val addressfields = myLocation.getAddress()
+    var output ="Address: "
+    output = output + addressfields(0)+"\n City: "
+    output = output + addressfields(1)+"\n PLZ: "
+    output = output + addressfields(1)
+
+    Toast.makeText(getApplicationContext(),output,5000).show()
 
     /*val b = findViewById(R.id.btnCurrentLocation).asInstanceOf[Button];
     //val locationManager = getSystemService(LOCATION_SERVICE).asInstanceOf[LocationManager];
