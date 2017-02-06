@@ -77,10 +77,11 @@ public class RegistrationDB extends SQLiteOpenHelper
                     ");";
 
             String CREATE_PERSON_RESIDENCE_TABLE = "CREATE TABLE person_residence ("+
-                    "person_id INTEGER CONSTRAINT fk_person REFERENCES person (id) NOT NULL PRIMARY KEY, "+
-                    "residence_id INTEGER CONSTRAINT fk_residence REFERENCES residence (id) NOT NULL PRIMARY KEY "+
-                    "main_residence BOOLEAN"+
-                    ");";
+                    "person_id INTEGER CONSTRAINT fk_person REFERENCES person (id) NOT NULL , "+
+                    "residence_id INTEGER CONSTRAINT fk_residence REFERENCES residence (id) NOT NULL , "+
+                    "main_residence BOOLEAN, "+
+                    "PRIMARY KEY (person_id, residence_id)"+
+                    "); ";
 
             db.execSQL("DROP TABLE IF EXISTS PERSON;");
             db.execSQL("DROP TABLE IF EXISTS RESIDENCE;");
@@ -126,6 +127,50 @@ public class RegistrationDB extends SQLiteOpenHelper
         SQLiteDatabase db = getWritableDatabase();
         try
         {
+            String CREATE_PERSON_TABLE = "CREATE TABLE person ( " +
+                    "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                    "firstname TEXT NOT NULL, " +
+                    "lastname TEXT NOT NULL, " +
+                    "akaGrade TEXT, " +
+                    "birthdate TEXT NOT NULL, " +
+                    "gender TEXT NOT NULL, " +
+                    "religion TEXT, " +
+                    "birthplace TEXT NOT NULL, " +
+                    "maritalstatus TEXT NOT NULL, " +
+                    "nationality TEXT NOT NULL, " +
+                    "zmr TEXT, " +
+                    "docType TEXT, " +
+                    "docDate TEXT, " +
+                    "docNumber INT, " +
+                    "docState TEXT, " +
+                    "immigrant TEXT, " +
+                    "immigrantCountry TEXT" +
+                    ")";
+            String CREATE_RESIDENCE_TABLE = "CREATE TABLE residence ( " +
+                    "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                    "street TEXT NOT NULL, " +
+                    "house INT NOT NULL, " +
+                    "stair INT, " +
+                    "door INT, " +
+                    "plz INT NOT NULL, " +
+                    "city TEXT NOT NULL," +
+                    "state TEXT NOT NULL " +
+                    ");";
+
+            String CREATE_PERSON_RESIDENCE_TABLE = "CREATE TABLE person_residence ("+
+                    "person_id INTEGER CONSTRAINT fk_person REFERENCES person (id) NOT NULL , "+
+                    "residence_id INTEGER CONSTRAINT fk_residence REFERENCES residence (id) NOT NULL , "+
+                    "main_residence BOOLEAN, "+
+                    "PRIMARY KEY (person_id, residence_id)"+
+                    "); ";
+
+            db.execSQL("DROP TABLE IF EXISTS PERSON;");
+            db.execSQL("DROP TABLE IF EXISTS RESIDENCE;");
+            db.execSQL("DROP TABLE IF EXISTS PERSON_RESIDENCE;");
+            // create tables
+            db.execSQL(CREATE_PERSON_TABLE);
+            db.execSQL(CREATE_RESIDENCE_TABLE);
+            db.execSQL(CREATE_PERSON_RESIDENCE_TABLE);
             db.insert("residence", null, makeContentValues(residence));
             return true;
         }
@@ -157,7 +202,7 @@ public class RegistrationDB extends SQLiteOpenHelper
         cv.put("birthplace", person.getBirthPlace());
         cv.put("maritalstatus", person.getMaritalStatus());
         cv.put("nationality", person.getNationality());
-        //cv.put("residence", person.getResidenceAt(0));
+        //cv.put("residence", person.getResidenceAt(0).get);
         cv.put("zmr", person.getZMR());
         cv.put("docType", person.getDocType());
         cv.put("docDate", person.getDocDate().toString());
@@ -171,6 +216,7 @@ public class RegistrationDB extends SQLiteOpenHelper
     private ContentValues makeContentValues(Residence residence)
     {
         ContentValues cv = new ContentValues();
+        cv.put("street", residence.getStreet());
         cv.put("house", residence.getHouseNumber());
         cv.put("stair", residence.getStairs());
         cv.put("door", residence.getDoor());
@@ -185,7 +231,7 @@ public class RegistrationDB extends SQLiteOpenHelper
         String persId = "";
         String resId = "";
         String selectPerson = String.format("SELECT id FROM person WHERE lastname = '%s' AND firstname = '%s';", person.getLastName(),person.getFirstName());
-        String selectResidence = String.format("SELECT id FROM residence WHERE street = '%s' AND city = '%s' AND house = '%d;", residence.getStreet(),residence.getCity(),residence.getHouseNumber());
+        String selectResidence = String.format("SELECT id FROM residence WHERE street = '%s' AND city = '%s' AND house = '%d';", residence.getStreet(),residence.getCity(),residence.getHouseNumber());
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = db.rawQuery(selectPerson, null);
         if (c.moveToFirst()) {
@@ -194,10 +240,10 @@ public class RegistrationDB extends SQLiteOpenHelper
             } while (c.moveToNext());
         };
         Cursor c2 = db.rawQuery(selectResidence, null);
-        if (c.moveToFirst()) {
+        if (c2.moveToFirst()) {
             do {
-                resId = c.getString(0);
-            } while (c.moveToNext());
+                resId = c2.getString(0);
+            } while (c2.moveToNext());
         };
         ContentValues cv = new ContentValues();
         cv.put("person_id", persId);
@@ -212,7 +258,7 @@ public class RegistrationDB extends SQLiteOpenHelper
      *                 gets inserted into SELECT Statement
      * @return  Person object
      */
-    private Person sqlGetPersonByLastName(String lastName)
+    public Person sqlGetPersonByLastName(String lastName)
     {
         String selectStatement = String.format("SELECT * FROM person WHERE lastname = '%s';", lastName);
 
@@ -235,15 +281,14 @@ public class RegistrationDB extends SQLiteOpenHelper
             birthplace = c.getString(7);
             maritalStatus = c.getString(8);
             nationality = c.getString(9);
-            residenceID = c.getString(10);
-            zmr = c.getString(11);
-            docType = c.getString(12);
-            docDate = c.getString(13);
-            docNumber = c.getString(14);
-            docState = c.getString(15);
+            zmr = c.getString(10);
+            docType = c.getString(11);
+            docDate = c.getString(12);
+            docNumber = c.getString(13);
+            docState = c.getString(14);
             immigrant = false;
             if (c.getString(15) == "true") immigrant = true;
-            immigrantCountry = c.getString(17);
+            immigrantCountry = c.getString(16);
 
             } while (c.moveToNext());
         }
@@ -267,4 +312,41 @@ public class RegistrationDB extends SQLiteOpenHelper
         c.close(); db.close(); return person;
     }
 
+
+    public ArrayList<Person> sqlGetAllPersons()
+    {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = db.rawQuery("SELECT * FROM person;", null);
+
+        ArrayList<Person> personList = new ArrayList<Person>(){};
+
+        try {
+            if (c.moveToFirst()) {
+                do {
+                    Person tempPerson = new Person(c.getString(1), c.getString(2));
+                    tempPerson.setDegree(c.getString(3));
+                    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+                    tempPerson.setBirthDate(sdf.parse(c.getString(3)));
+                    tempPerson.setGender(c.getString(4));
+                    tempPerson.setReligion(c.getString(5));
+                    tempPerson.setBirthPlace(c.getString(6));
+                    tempPerson.setMaritalStatus(c.getString(7));
+                    tempPerson.setNationality(c.getString(8));
+                    tempPerson.setZMR(c.getString(9));
+                    tempPerson.setDocType(c.getString(10));
+                    tempPerson.setDocDate(sdf.parse(c.getString(11)));
+                    tempPerson.setDocNumber(c.getString(12));
+                    tempPerson.setDocNation(c.getString(13));
+                    if (c.getString(14) == "true") tempPerson.setImmigrant(true);
+                    else tempPerson.setImmigrant(false);
+                    tempPerson.setImmigrantCountry(c.getString(15));
+                    personList.add(tempPerson);
+
+                } while (c.moveToNext());
+            }
+        } catch (ParseException e) { e.printStackTrace(); }
+
+
+    c.close(); db.close(); return personList;
+    }
 }

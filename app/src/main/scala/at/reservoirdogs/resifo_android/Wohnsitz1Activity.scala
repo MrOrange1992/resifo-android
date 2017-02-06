@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.{Button, RadioButton, TextView, Toast}
 import android.widget._
-import at.reservoirdogs.resifo_android.dataBase.{Person, Residence}
+import at.reservoirdogs.resifo_android.dataBase.{Person, RegistrationDB, Residence}
 
 /**
   * Created by felix on 01/02/2017.
@@ -27,8 +27,6 @@ class Wohnsitz1Activity extends AppCompatActivity
 
     List( findViewById(R.id.editTextStreet).asInstanceOf[EditText].getText.toString,
           findViewById(R.id.editTextHouse).asInstanceOf[EditText].getText.toString,
-        findViewById(R.id.editTextStairs).asInstanceOf[EditText].getText.toString,
-      findViewById(R.id.editTextDoor).asInstanceOf[EditText].getText.toString,
       findViewById(R.id.editTextPLZ).asInstanceOf[EditText].getText.toString,
       findViewById(R.id.editTextVillage).asInstanceOf[EditText].getText.toString,
       findViewById(R.id.editTextState).asInstanceOf[EditText].getText.toString).foreach (

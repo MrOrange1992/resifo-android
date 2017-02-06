@@ -7,16 +7,17 @@ import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.{Button, RadioButton, TextView, Toast}
 import android.widget._
-import at.reservoirdogs.resifo_android.dataBase.{Person, Residence}
+import at.reservoirdogs.resifo_android.dataBase.{Person, RegistrationDB, Residence}
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.{EditText, RadioButton, Toast}
-import at.reservoirdogs.resifo_android.dataBase.Person
 
 class AnmeldeActivity extends AppCompatActivity
 {
+  var regDB: RegistrationDB = _
+
   override protected def onCreate(savedInstanceState: Bundle)
   {
     super.onCreate(savedInstanceState)
@@ -49,7 +50,7 @@ class AnmeldeActivity extends AppCompatActivity
     {
       if (checkInputs(view, person))
       {
-        writePersonToDB(view)
+        writePersonToDB(view, person)
         startActivity(new Intent(this, classOf[MainActivity]))
         Toast.makeText(getApplicationContext,"Speichern erfolgreich",5000).show()
       }
@@ -57,15 +58,18 @@ class AnmeldeActivity extends AppCompatActivity
     }
     else
     {
-      writePersonToDB(view)
+      writePersonToDB(view, person)
       startActivity(new Intent(this, classOf[MainActivity]))
       Toast.makeText(getApplicationContext,"Speichern erfolgreich",5000).show()
     }
   }
 
-  def writePersonToDB(view: View): Unit =
+  def writePersonToDB(view: View, person: Person): Unit =
   {
-
+    regDB = new RegistrationDB(getApplicationContext)
+    regDB.saveResidenceToDB(person.getResidenceAt(0))
+    regDB.savePersonToDB(person)
+    regDB.assignResidenceToPerson(person, person.getResidenceAt(0))
   }
 }
 
