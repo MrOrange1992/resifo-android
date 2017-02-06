@@ -34,20 +34,23 @@ public class GpsLocation implements LocationListener {
 
     public GpsLocation(AppCompatActivity callingActivity) {
 
-        if (ActivityCompat.checkSelfPermission(callingActivity, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(callingActivity, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(callingActivity, new String[] {
-                            Manifest.permission.ACCESS_FINE_LOCATION,
-                            Manifest.permission.ACCESS_COARSE_LOCATION,
-                            Manifest.permission.INTERNET},1);
+        try {
+            while( (ActivityCompat.checkSelfPermission(callingActivity, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(callingActivity, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED)) {
+                ActivityCompat.requestPermissions(callingActivity, new String[]{
+                        Manifest.permission.ACCESS_FINE_LOCATION,
+                        Manifest.permission.ACCESS_COARSE_LOCATION,
+                        Manifest.permission.INTERNET}, 1);
+            }
 
+            locationManager = (LocationManager) callingActivity.getSystemService(Context.LOCATION_SERVICE);
+            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);
+            location = locationManager.getLastKnownLocation(locationManager.GPS_PROVIDER);
+
+            geocoder = new Geocoder(callingActivity, Locale.getDefault());
         }
-
-        locationManager = (LocationManager) callingActivity.getSystemService(Context.LOCATION_SERVICE);
-        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);
-        location = locationManager.getLastKnownLocation(locationManager.GPS_PROVIDER);
-
-        geocoder = new Geocoder(callingActivity, Locale.getDefault());
-
+        catch (Exception e){
+            Console.println(e.toString());
+        }
 
 
     }
