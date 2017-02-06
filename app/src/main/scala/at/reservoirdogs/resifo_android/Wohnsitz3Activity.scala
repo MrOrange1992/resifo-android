@@ -14,4 +14,17 @@ class Wohnsitz3Activity extends AppCompatActivity
   }
 
   def gotoAnmeldeActivity(view: View): Unit = startActivity(new Intent(this, classOf[AnmeldeActivity]))
+
+
+  def enableEmigratedField(view: View): Unit =
+  {
+    findViewById(R.id.EmigrationField).setEnabled(true)
+    findViewById(R.id.EmigrationField).setVisibility(View.VISIBLE)
+  }
+
+  def disableEmigratedField(view: View): Unit =
+  {
+    findViewById(R.id.EmigrationField).setEnabled(false)
+    findViewById(R.id.EmigrationField).setVisibility(View.GONE)
+  }
 }
