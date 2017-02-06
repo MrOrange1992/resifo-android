@@ -93,38 +93,15 @@ class Wohnsitz1Activity extends AppCompatActivity
   def getAddress(view: View): Unit = {
     val myLocation: GpsLocation = new GpsLocation(this)
     val addressfields = myLocation.getAddress()
-    var output ="Address: "
-    output = output + addressfields(0)+"\n City: "
-    output = output + addressfields(1)+"\n PLZ: "
-    output = output + addressfields(1)
 
-    Toast.makeText(getApplicationContext(),output,5000).show()
-
-    /*val b = findViewById(R.id.btnCurrentLocation).asInstanceOf[Button];
-    //val locationManager = getSystemService(LOCATION_SERVICE).asInstanceOf[LocationManager];
-
-    val listener = new LocationListener {
-
-      override def onProviderEnabled(s : String): Unit = {
-      }
-
-      override def onStatusChanged(provider: String, status: Int, extras: Bundle): Unit = {
-
-      }
-
-      override def onLocationChanged(location: Location): Unit = {
-      location.getLatitude();
-      location.getLongitude();
-
-      val myLocation  = "Latitude = " + location.getLatitude() + " Longitude = " + location.getLongitude();
-
-        Toast.makeText(getApplicationContext(),myLocation,5000).show();
-    }
-
-      override def onProviderDisabled(provider: String): Unit = {
-
-      }
-    }*/
+    val housenumber = addressfields(0).split(" ")(addressfields(0).split(" ").length-1)
+    val street = addressfields(0).substring(0,addressfields(0).length() - housenumber.length())
+    val city = addressfields(1)
+    val plz = addressfields(2)
+    findViewById(R.id.editTextHouse).asInstanceOf[EditText].setText(housenumber)
+    findViewById(R.id.editTextStreet).asInstanceOf[EditText].setText(street)
+    findViewById(R.id.editTextVillage).asInstanceOf[EditText].setText(city)
+    findViewById(R.id.editTextPLZ).asInstanceOf[EditText].setText(plz);
 
   }
 }
